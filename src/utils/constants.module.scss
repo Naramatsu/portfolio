@@ -1,0 +1,56 @@
+$primaryColor: #db00ff;
+$secundaryColor: #00fff0;
+$terciaryColor: #2a1454;
+$softBgColor: #f6f3fc;
+
+@mixin container {
+  width: 70%;
+  margin: auto;
+}
+
+@mixin activeTab {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+@mixin displayFlex {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+@mixin backgroundGradient {
+  background: linear-gradient(to right, $primaryColor 0%, $secundaryColor 100%);
+}
+
+@mixin ulHeader {
+  @include displayFlex;
+  gap: 35px;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+@mixin textGradient {
+  @include backgroundGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin linkHover {
+  @include displayFlex;
+  border: solid 1px $primaryColor;
+  justify-content: center;
+  color: $primaryColor;
+  transform-origin: center;
+  transition: 0.3s ease-out all;
+
+  &:hover {
+    background-color: $primaryColor;
+    background-size: 100%;
+    color: #fff;
+    transform-origin: center;
+    transition: 0.3s ease-in all;
+  }
+}
