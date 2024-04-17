@@ -1,0 +1,232 @@
+@import "../../../utils/constants.module.scss";
+
+.header {
+  @include displayFlex;
+  margin: auto;
+  padding-top: 20px;
+  width: 80%;
+}
+
+.logo {
+  a {
+    @include displayFlex;
+    color: $terciaryColor;
+    gap: 20px;
+  }
+}
+
+.nav {
+  min-width: 550px;
+  position: relative;
+  width: 60%;
+
+  ul {
+    @include ulHeader;
+
+    li {
+      height: 100%;
+      width: max-content;
+
+      a {
+        color: $terciaryColor;
+        font-weight: 600;
+        position: relative;
+
+        &::before {
+          @include backgroundGradient;
+          border-radius: 4px;
+          bottom: 6px;
+          content: "";
+          height: 2px;
+          left: 0;
+          position: absolute;
+          transition: transform 0.3s ease-in-out;
+          width: 100%;
+        }
+      }
+
+      &:hover {
+        a {
+          color: $primaryColor;
+
+          &::before {
+            @include activeTab;
+          }
+        }
+      }
+    }
+  }
+}
+
+.linkInactive {
+  &::before {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.linkActive {
+  &::before {
+    @include activeTab;
+  }
+}
+
+.btnHireMe {
+  @include displayFlex;
+  @include backgroundGradient;
+  align-items: center;
+  background-size: 200%;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin-left: 20px;
+  max-width: 135px;
+  min-width: 135px;
+  padding: 17px 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transform-origin: right;
+  transition: 0.4s all ease-in-out;
+
+  &:hover {
+    background-size: 150%;
+    transform-origin: left;
+    transition: 0.4s all ease-in-out;
+  }
+}
+
+.buttonContainer {
+  @include displayFlex;
+}
+
+.hamburgerMenu {
+  display: none;
+
+  section {
+    height: 40px;
+    position: relative;
+    width: 40px;
+
+    svg {
+      color: $primaryColor;
+      height: 40px;
+      position: absolute;
+      transition: 0.5s all ease-in-out;
+      width: 40px;
+    }
+  }
+}
+
+.hamburgerMenuOpen {
+  transform: rotate(0) scale(1);
+  transform-origin: center;
+}
+
+.hamburgerMenuClose {
+  transform: rotate(90deg) scale(0);
+  transform-origin: center;
+}
+
+.navClose {
+  height: 0px;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 100px;
+  transition: all 0.5s ease;
+  width: 100%;
+
+  ul,
+  li,
+  a {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+}
+
+.navOpen {
+  background-color: $terciaryColor;
+  height: calc(100%);
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 120px;
+  transition: all 0.5s ease;
+  width: 100%;
+  z-index: 10;
+
+  ul {
+    @include ulHeader;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-top: 30px;
+    position: relative;
+    width: 100%;
+
+    li {
+      position: relative;
+
+      a {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 15px 0;
+        position: relative;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .header {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1551px) {
+  .header {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1550px) {
+  .nav {
+    min-width: fit-content;
+  }
+}
+
+@media (max-width: 1450px) {
+  .header {
+    width: 90%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding: 20px 15px;
+    width: 100%;
+  }
+  .logo {
+    a p {
+      display: none;
+    }
+  }
+}
