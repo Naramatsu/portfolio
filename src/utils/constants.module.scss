@@ -1,7 +1,8 @@
-$primaryColor: #db00ff;
-$secundaryColor: #00fff0;
+$primaryColor: #b6138e;
+$secundaryColor: #430f95;
 $terciaryColor: #2a1454;
 $softBgColor: #f6f3fc;
+$projectBackground: #140c1c;
 
 @mixin container {
   width: 70%;
@@ -52,5 +53,32 @@ $softBgColor: #f6f3fc;
     color: #fff;
     transform-origin: center;
     transition: 0.3s ease-in all;
+  }
+}
+
+@mixin titleGradient {
+  @include textGradient;
+  font-size: 45px;
+}
+
+@mixin container {
+  width: 80%;
+  margin: auto;
+
+  @media (min-width: 1800px) {
+    width: 60%;
+  }
+
+  @media (max-width: 1551px) {
+    width: 70%;
+  }
+
+  @media (max-width: 1450px) {
+    width: 90%;
+  }
+
+  @media (max-width: 550px) {
+    padding: 20px 15px;
+    width: 100%;
   }
 }

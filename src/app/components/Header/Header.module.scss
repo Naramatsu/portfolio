@@ -1,6 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .header {
+  @include container;
   @include displayFlex;
   margin: auto;
   padding-top: 20px;
@@ -187,18 +188,6 @@
   }
 }
 
-@media (min-width: 1800px) {
-  .header {
-    width: 60%;
-  }
-}
-
-@media (max-width: 1551px) {
-  .header {
-    width: 70%;
-  }
-}
-
 @media (max-width: 1550px) {
   .nav {
     min-width: fit-content;
@@ -206,10 +195,6 @@
 }
 
 @media (max-width: 1450px) {
-  .header {
-    width: 90%;
-  }
-
   .nav {
     display: none;
   }
@@ -220,10 +205,6 @@
 }
 
 @media (max-width: 550px) {
-  .header {
-    padding: 20px 15px;
-    width: 100%;
-  }
   .logo {
     a p {
       display: none;
