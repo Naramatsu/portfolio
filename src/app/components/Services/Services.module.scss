@@ -7,8 +7,7 @@
   width: 100%;
 
   h2 {
-    @include textGradient;
-    font-size: 45px;
+    @include titleGradient;
   }
 
   p {
@@ -31,12 +30,11 @@
 }
 
 .servicesContainer {
+  @include container;
   @include displayFlex;
   flex-direction: column;
   gap: 0;
-  margin: auto;
   position: relative;
-  width: 80%;
 
   &:not(:hover) {
     .serviceTab:nth-child(1) {
@@ -102,26 +100,17 @@
     text-transform: capitalize;
     transition: all 0.5s ease-in-out;
     width: 40%;
-    min-width: 400px;
+    min-width: 350px;
     z-index: 2;
   }
 
   p {
     color: $terciaryColor;
     margin: 0;
-    padding: 30px 0;
+    padding: 30px;
     text-align: justify;
     transition: all 0.5s ease-in-out;
     z-index: 2;
-  }
-}
-
-@media (max-width: 1500px) {
-  .serviceTab {
-    p {
-      width: 100%;
-      padding-right: 20px;
-    }
   }
 }
 
@@ -191,6 +180,8 @@
   }
 
   .servicesContainer {
+    padding: 0;
+
     .serviceTab {
       &:nth-child(2):hover ~ .selector {
         top: 200px;
