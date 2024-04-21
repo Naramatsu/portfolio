@@ -1,0 +1,106 @@
+@import "../../../utils/constants.module.scss";
+
+.resume {
+  background-color: $softBgColor;
+  padding: 120px 0;
+  width: 100%;
+}
+
+.resumeContainer {
+  @include container;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.resumeOverview {
+  position: relative;
+
+  h2 {
+    @include titleGradient;
+    margin-bottom: 50px;
+  }
+}
+
+.resumeItemList {
+  @include displayFlex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.resumeItem {
+  background: #fff;
+  border-radius: 20px;
+  cursor: default;
+  padding: 30px 20px;
+  position: relative;
+  transition: 0.5s all ease-in-out;
+  width: 100%;
+
+  &::before {
+    @include backgroundGradient;
+    border-radius: 20px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.5s all ease-in-out;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  label,
+  h3,
+  p {
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    z-index: 2;
+  }
+
+  label {
+    color: $primaryColor;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  h3 {
+    color: $secundaryColor;
+    font-size: 25px;
+    margin: 8px 0;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      transition: 0.5s all ease-in-out;
+    }
+
+    label,
+    h3,
+    p {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .resumeContainer {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .resumeContainer {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 941px) {
+  .resumeContainer {
+    grid-template-columns: 1fr;
+  }
+}
