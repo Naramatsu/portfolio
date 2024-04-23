@@ -1,0 +1,129 @@
+@import "../../../utils/constants.module.scss";
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  backdrop-filter: blur(5px) brightness(0.5);
+  top: 0;
+  left: 0;
+  z-index: 5;
+  transition: 0.5s all ease-in-out;
+}
+
+.modalOpen,
+.modalClose {
+  @extend .modal;
+}
+
+.modalOpen {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modalClose {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.modalContainer {
+  width: 50%;
+  min-width: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  min-height: 700px;
+  padding: 30px 50px;
+  position: relative;
+
+  svg {
+    @include backgroundGradient;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+    right: 50px;
+    top: 30px;
+    color: #fff;
+    border-radius: 50%;
+
+    * {
+      cursor: pointer;
+    }
+  }
+
+  * {
+    cursor: default;
+  }
+
+  h3 {
+    @include titleGradient;
+    font-size: 25px;
+    margin: 8px 0;
+    text-transform: uppercase;
+  }
+
+  label {
+    color: $primaryColor;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 20px auto;
+  }
+
+  h4,
+  h5 {
+    color: $secundaryColor;
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  h5 {
+    font-size: 18px;
+    color: $terciaryColor;
+  }
+
+  ul {
+    @include displayFlex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+
+    li {
+      @include titleGradient;
+      font-size: 16px;
+      padding: 15px;
+      border: solid 1px $primaryColor;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 1330px) {
+  .modalContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 940px) {
+  .modalContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 760px) {
+  .modalContainer {
+    width: 90%;
+    overflow: auto;
+    height: 90%;
+  }
+}
