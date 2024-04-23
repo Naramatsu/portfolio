@@ -7,17 +7,20 @@ import Link from "next/link";
 import { routes } from "../Header/Header.data";
 import { DARK } from "@/utils/constants";
 
-const Footer = ({ theme }) => {
+const Footer = ({ theme, languaje }) => {
   const LogoTheme = theme === DARK ? LogoWhite : Logo;
   return (
-    <section style={{ "--isDark": theme === DARK }} className={styles.footer}>
+    <section
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
+      className={styles.footer}
+    >
       <Link href="#">
         <Image src={LogoTheme} alt="logo" width={60} height={80} />
       </Link>
       <ul>
         {routes.map(({ link, label }, index) => (
           <li key={index}>
-            <Link href={link}>{label}</Link>
+            <Link href={link}>{label[languaje]}</Link>
           </li>
         ))}
       </ul>

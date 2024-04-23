@@ -1,26 +1,37 @@
+import { ENGLISH, SPANISH } from "@/utils/constants";
+
 export const routes = [
   {
     link: "/services",
-    label: "Services",
+    label: {
+      [ENGLISH]: "Services",
+      [SPANISH]: "Servicios",
+    },
   },
   {
     link: "/works",
-    label: "Works",
+    label: { [ENGLISH]: "Works", [SPANISH]: "Trabajos" },
   },
   {
-    link: "/resume",
-    label: "Resume",
+    link: "/experience",
+    label: {
+      [ENGLISH]: "Experience",
+      [SPANISH]: "Experiencia",
+    },
   },
   {
     link: "/skills",
-    label: "Skills",
+    label: { [ENGLISH]: "Skills", [SPANISH]: "Habilidades" },
   },
   {
     link: "/contact",
-    label: "Contact",
+    label: { [ENGLISH]: "Contact", [SPANISH]: "Contacto" },
   },
 ];
 
 export const email = "joncyy_19@hotmail.com";
 
-export const hireMeLabel = "Hire me!";
+export const hireMeLabel = {
+  [ENGLISH]: "Hire me!",
+  [SPANISH]: "Contratame!",
+};

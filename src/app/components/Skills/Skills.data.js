@@ -5,11 +5,19 @@ import Html5Logo from "../../assets/logos/htmlLogo.png";
 import CssLogo from "../../assets/logos/css3Logo.png";
 import SassLogo from "../../assets/logos/sassLogo.png";
 import FigmaLogo from "../../assets/logos/figmaLogo.png";
+import { ENGLISH, SPANISH } from "@/utils/constants";
 
-export const skillsTitle = "My Skills";
+export const skillsTitle = {
+  [ENGLISH]: "My Skills",
+  [SPANISH]: "Mis Habilidades",
+};
 
-export const skillsDescription =
-  "We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.";
+export const skillsDescription = {
+  [ENGLISH]:
+    "I have a strong background in software development using fresh and modern languages which demonstrate my skills and knowledge in building modern and scalable web applications.",
+  [SPANISH]:
+    "Tengo una sólida experiencia en desarrollo de software utilizando lenguajes novedosos y modernos que demuestran mis habilidades y conocimientos en la creación de aplicaciones web modernas y escalables.",
+};
 
 export const skillsList = [
   {

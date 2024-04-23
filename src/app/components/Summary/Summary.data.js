@@ -1,3 +1,4 @@
+import { ENGLISH, SPANISH, whatsAppLink } from "@/utils/constants";
 import {
   FaFacebookF,
   FaGithub,
@@ -5,38 +6,58 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-export const introduction = (
-  <>
-    <h3>I am Jonathan</h3>
-    <h1>
-      Software Engineer
-      <br />
-      Frontend Developer
-    </h1>
-    <p>
-      I am responsible for developing and testing frontend features, integrating
-      APIs, and ensuring high performance and user experience.
-    </p>
-  </>
-);
+export const introduction = {
+  [ENGLISH]: (
+    <>
+      <h3>I am Jonathan</h3>
+      <h1>
+        Software Engineer
+        <br />
+        Frontend Developer
+      </h1>
+      <p>
+        Able to create, modify, fix and test frontend functions, integrating
+        APIs and ensuring high performance and user experience.
+      </p>
+    </>
+  ),
+  [SPANISH]: (
+    <>
+      <h3>Hola, soy Jonathan</h3>
+      <h1>
+        Software Engineer
+        <br />
+        Frontend Developer
+      </h1>
+      <p>
+        Capaz de crear, modificar, corregir y probar funciones frontend,
+        integrando API y garantizando un alto rendimiento y experiencia de
+        usuario.
+      </p>
+    </>
+  ),
+};
 
-export const downloadCvLabel = "Download CV";
+export const downloadCvLabel = {
+  [ENGLISH]: "Download CV",
+  [SPANISH]: "Descargar HV",
+};
 
 export const mediaLinks = [
   {
-    link: "#",
+    link: "https://www.facebook.com/jcnm19/",
     icon: <FaFacebookF />,
   },
   {
-    link: "#",
+    link: "https://www.linkedin.com/in/jonathan-narv%C3%A1ez-mart%C3%ADnez-338102233/",
     icon: <FaLinkedinIn />,
   },
   {
-    link: "#",
+    link: "https://github.com/Naramatsu",
     icon: <FaGithub />,
   },
   {
-    link: "#",
+    link: whatsAppLink,
     icon: <FaWhatsapp />,
   },
 ];
@@ -44,18 +65,30 @@ export const mediaLinks = [
 export const quikDataInfo = [
   {
     mount: 5,
-    label: "Years of Experience",
+    label: {
+      [ENGLISH]: "Years of Experience",
+      [SPANISH]: "Años de Experiencia",
+    },
   },
   {
     mount: 6,
-    label: "Code Personal Projects",
+    label: {
+      [ENGLISH]: "Personal Projects (Code)",
+      [SPANISH]: "Proyectos Personales (Code)",
+    },
   },
   {
     mount: "+17",
-    label: "Technologies Learned",
+    label: {
+      [ENGLISH]: "Technologies Learned",
+      [SPANISH]: "Tecnologías Aprendidas",
+    },
   },
   {
     mount: 2,
-    label: "UI/UX Personal Projects",
+    label: {
+      [ENGLISH]: "Personal Projects (UI/UX)",
+      [SPANISH]: "Proyectos personales (UI/UX)",
+    },
   },
 ];

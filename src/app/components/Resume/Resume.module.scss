@@ -1,7 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .resume {
-  @include themeStyles(var(--isDark), $darkBgColor, $softBgColor);
+  @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
   padding: 120px 0;
   width: 100%;
 }
@@ -30,7 +30,7 @@
 }
 
 .resumeItem {
-  @include themeStyles(var(--isDark), $projectBackground, #fff);
+  @include themeStyles(var(--isdark), $projectBackground, #fff);
   border-radius: 20px;
   cursor: default;
   padding: 30px 20px;
@@ -68,14 +68,14 @@
   }
 
   h3 {
-    @include fontColor(var(--isDark), $secundaryColor);
+    @include fontColor(var(--isdark), $secundaryColor);
     font-size: 25px;
     margin: 8px 0;
     text-transform: uppercase;
   }
 
   p {
-    @include fontColor(var(--isDark), $terciaryColor);
+    @include fontColor(var(--isdark), $terciaryColor);
   }
 
   &:hover {
@@ -112,7 +112,7 @@
   text-align: center;
 
   a {
-    @include fontColor(var(--isDark), $terciaryColor);
+    @include fontColor(var(--isdark), $terciaryColor);
     width: 100%;
   }
 }

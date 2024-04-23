@@ -12,8 +12,9 @@ import {
 } from "./Resume.data";
 import ModalExperience from "../ModalExperience";
 import { DARK } from "@/utils/constants";
+import Link from "next/link";
 
-const Resume = ({ theme }) => {
+const Resume = ({ theme, languaje }) => {
   const [showModal, setShowModal] = useState(false);
   const [experienceSelected, setExperienceSelected] = useState(null);
 
@@ -24,10 +25,13 @@ const Resume = ({ theme }) => {
   };
 
   return (
-    <section style={{ "--isDark": theme === DARK }} className={styles.resume}>
+    <section
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
+      className={styles.resume}
+    >
       <section className={styles.resumeContainer}>
         <section className={styles.resumeOverview}>
-          <h2>{resumeExperienceTitle}</h2>
+          <h2>{resumeExperienceTitle[languaje]}</h2>
           <section className={styles.resumeItemList}>
             {experienceList.map(({ period, title, company, info }, index) => (
               <section
@@ -45,23 +49,25 @@ const Resume = ({ theme }) => {
           </section>
         </section>
         <section className={styles.resumeOverview}>
-          <h2>{resumeEducationTitle}</h2>
+          <h2>{resumeEducationTitle[languaje]}</h2>
           <section className={styles.resumeItemList}>
             {educationList.map(({ period, title, company }, index) => (
               <section key={index} className={styles.resumeItem}>
                 <label>{period}</label>
-                <h3>{title}</h3>
+                <h3>{title[languaje]}</h3>
                 <p>{company}</p>
               </section>
             ))}
           </section>
-          <h2 style={{ marginTop: "50px" }}>{resumeCertificationsTitle}</h2>
+          <h2 style={{ marginTop: "50px" }}>
+            {resumeCertificationsTitle[languaje]}
+          </h2>
           <section className={styles.resumeCertificationList}>
             {certificationList.map(({ title, link }, index) => (
               <section key={index} className={styles.certificationItems}>
-                <a href={link} target="__blank" rel="noreferrer">
+                <Link href={link} target="__blank" rel="noreferrer">
                   {title}
-                </a>
+                </Link>
               </section>
             ))}
           </section>
@@ -70,6 +76,7 @@ const Resume = ({ theme }) => {
       <ModalExperience
         isVisible={showModal}
         info={experienceSelected}
+        languaje={languaje}
         onClose={() => setShowModal(false)}
       />
     </section>

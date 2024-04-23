@@ -90,6 +90,11 @@
     color: $terciaryColor;
   }
 
+  p {
+    text-align: justify;
+    line-height: 1.5;
+  }
+
   ul {
     @include displayFlex;
     justify-content: center;

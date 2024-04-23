@@ -1,7 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .contact {
-  @include themeStyles(var(--isDark), $darkBgColor, $softBgColor);
+  @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
   padding: 120px 0;
   width: 100%;
 }
@@ -14,12 +14,12 @@
   position: relative;
 
   p {
-    @include fontColor(var(--isDark), $terciaryColor);
+    @include fontColor(var(--isdark), $terciaryColor);
   }
 }
 
 .contactEmailSection {
-  @include themeStyles(var(--isDark), $projectBackground, #fff);
+  @include themeStyles(var(--isdark), $projectBackground, #fff);
   border-radius: 20px;
   padding: 40px;
   position: relative;
@@ -34,6 +34,7 @@
     margin: 30px auto;
     max-width: 700px;
     text-align: left;
+    line-height: 1.5;
   }
 }
 
@@ -53,7 +54,7 @@
   }
 
   input {
-    @include themeStyles(var(--isDark), $darkBgColor, $softBgColor);
+    @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
     border: solid 1px $secundaryColor;
     border-radius: 5px;
     padding: 1em;
@@ -71,7 +72,7 @@
   }
 
   textarea {
-    @include themeStyles(var(--isDark), $darkBgColor, $softBgColor);
+    @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
     border: solid 1px $secundaryColor;
     border-radius: 5px;
     height: 200px;
@@ -117,7 +118,7 @@
 
   p,
   h3 {
-    @include fontColor(var(--isDark), $terciaryColor);
+    @include fontColor(var(--isdark), $terciaryColor);
     line-height: 1.5;
   }
 }

@@ -2,7 +2,7 @@
 
 .footer {
   @include displayFlex;
-  @include themeStyles(var(--isDark), $heavyBgColor, $terciaryColor);
+  @include themeStyles(var(--isdark), $heavyBgColor, $terciaryColor);
   flex-direction: column;
   width: 100%;
   padding: 50px 0 20px 0;

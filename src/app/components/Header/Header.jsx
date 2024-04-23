@@ -8,25 +8,25 @@ import styles from "./Header.module.scss";
 import { email, hireMeLabel, routes } from "./Header.data";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
-import { DARK } from "@/utils/constants";
+import { DARK, whatsAppLink } from "@/utils/constants";
 
-const linksListBuilder = (onClick, className) => (
+const linksListBuilder = (onClick, className, languaje) => (
   <ul>
     {routes.map(({ link, label }, index) => (
       <li key={index}>
         <Link
           href={link}
-          onClick={() => onClick(label)}
-          className={className(label)}
+          onClick={() => onClick(label[languaje])}
+          className={className(label[languaje])}
         >
-          {label}
+          {label[languaje]}
         </Link>
       </li>
     ))}
   </ul>
 );
 
-const Header = ({ theme }) => {
+const Header = ({ theme, languaje }) => {
   const [activeTab, setActiveTab] = useState("");
   const [activeNav, setActiveNav] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -56,7 +56,7 @@ const Header = ({ theme }) => {
 
   return (
     <header
-      style={{ "--isDark": theme === DARK }}
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
       className={headerClassName()}
     >
       <section className={styles.headerContainer}>
@@ -67,10 +67,16 @@ const Header = ({ theme }) => {
           </Link>
         </section>
         <nav className={styles.nav}>
-          {linksListBuilder(handlerActiveTab, isActiveTab)}
+          {linksListBuilder(handlerActiveTab, isActiveTab, languaje)}
         </nav>
         <section className={styles.buttonContainer}>
-          <button className={styles.btnHireMe}>{hireMeLabel}</button>
+          <Link
+            href={whatsAppLink}
+            target="__blank"
+            className={styles.btnHireMe}
+          >
+            {hireMeLabel[languaje]}
+          </Link>
           <section className={styles.hamburgerMenu}>
             <section>
               <RiMenu3Fill
@@ -83,7 +89,7 @@ const Header = ({ theme }) => {
               />
             </section>
             <nav className={navStyles()}>
-              {linksListBuilder(navStyles, navStyles)}
+              {linksListBuilder(navStyles, navStyles, languaje)}
             </nav>
           </section>
         </section>

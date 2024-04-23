@@ -13,21 +13,26 @@ import {
 } from "./Summary.data";
 import { DARK } from "@/utils/constants";
 
-const Summary = ({ theme }) => {
+const Summary = ({ theme, languaje }) => {
   return (
-    <main style={{ "--isDark": theme === DARK }} className={styles.summary}>
+    <main
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
+      className={styles.summary}
+    >
       <Image className={styles.imgPulse} src={Hi} alt="Hi" />
       <section className={styles.summaryContainer}>
         <section className={styles.sectionSummary}>
-          {introduction}
+          {introduction[languaje]}
           <section className={styles.sectionButtons}>
-            <a className={styles.btnDownloadCV} href="#">
-              {downloadCvLabel} <AiOutlineDownload />
-            </a>
+            <Link className={styles.btnDownloadCV} href="#">
+              {downloadCvLabel[languaje]} <AiOutlineDownload />
+            </Link>
             <ul>
               {mediaLinks.map(({ link, icon }, index) => (
                 <li key={index}>
-                  <Link href={link}>{icon}</Link>
+                  <Link href={link} target="__blank">
+                    {icon}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -41,7 +46,7 @@ const Summary = ({ theme }) => {
         {quikDataInfo.map(({ mount, label }, index) => (
           <section key={index}>
             <h4>{mount}</h4>
-            <label>{label}</label>
+            <label>{label[languaje]}</label>
           </section>
         ))}
       </section>

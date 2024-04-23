@@ -7,17 +7,20 @@ import {
 } from "./Services.data";
 import { DARK } from "@/utils/constants";
 
-const Services = ({ theme }) => {
+const Services = ({ theme, languaje }) => {
   return (
-    <section style={{ "--isDark": theme === DARK }} className={styles.services}>
-      <h2>{servicesTitleLabel}</h2>
-      <p>{servicesDescription}</p>
+    <section
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
+      className={styles.services}
+    >
+      <h2>{servicesTitleLabel[languaje]}</h2>
+      <p>{servicesDescription[languaje]}</p>
       <section className={styles.servicesContainer}>
         {servicesList.map(({ title, description }, index) => (
           <section key={index} className={styles.serviceTab}>
             <label>0{index + 1}</label>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <h3>{title[languaje]}</h3>
+            <p>{description[languaje]}</p>
           </section>
         ))}
         <section className={styles.selector} />

@@ -1,7 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .services {
-  @include themeStyles(var(--isDark), $darkBgColor, $softBgColor);
+  @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
   padding: 120px 0;
   text-align: center;
   width: 100%;
@@ -11,7 +11,7 @@
   }
 
   p {
-    @include fontColor(var(--isDark), $terciaryColor);
+    @include fontColor(var(--isdark), $terciaryColor);
     margin: auto;
     margin-bottom: 50px;
     margin-top: 15px;
@@ -84,7 +84,7 @@
   z-index: 3;
 
   label {
-    @include fontColor(var(--isDark), $primaryColor);
+    @include fontColor(var(--isdark), $primaryColor);
     font-size: 20px;
     font-weight: 700;
     padding-left: 20px;
@@ -93,7 +93,7 @@
   }
 
   h3 {
-    @include fontColor(var(--isDark), $primaryColor);
+    @include fontColor(var(--isdark), $primaryColor);
     font-size: 30px;
     margin-bottom: 0;
     text-align: left;
@@ -105,7 +105,7 @@
   }
 
   p {
-    @include fontColor(var(--isDark), $terciaryColor);
+    @include fontColor(var(--isdark), $terciaryColor);
     margin: 0;
     padding: 30px;
     text-align: justify;

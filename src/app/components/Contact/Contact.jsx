@@ -11,28 +11,33 @@ import {
 } from "./Contact.data";
 import { DARK } from "@/utils/constants";
 
-const Contact = ({ theme }) => {
+const Contact = ({ theme, languaje }) => {
   return (
-    <section style={{ "--isDark": theme === DARK }} className={styles.contact}>
+    <section
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
+      className={styles.contact}
+    >
       <section className={styles.contactContainer}>
         <section className={styles.contactEmailSection}>
-          <h2>{contactTitle}</h2>
-          <p>{contactDescription}</p>
+          <h2>{contactTitle[languaje]}</h2>
+          <p>{contactDescription[languaje]}</p>
           <section className={styles.fieldContainer}>
             {emailFields.map(({ type, name, label }, index) => (
               <section key={index} className={styles.fieldcontrol}>
-                <p>{label}</p>
-                <input type={type} name={name} placeholder={label} />
+                <p>{label[languaje]}</p>
+                <input type={type} name={name} placeholder={label[languaje]} />
               </section>
             ))}
             <section className={styles.textAreaFieldcontrol}>
-              <p>{messageField.label}</p>
+              <p>{messageField.label[languaje]}</p>
               <textarea
-                placeholder={messageField.label}
+                placeholder={messageField.label[languaje]}
                 name={messageField.name}
               ></textarea>
             </section>
-            <button className={styles.btnSendMessage}>{btnSendMeLabel}</button>
+            <button className={styles.btnSendMessage}>
+              {btnSendMeLabel[languaje]}
+            </button>
           </section>
         </section>
         <section className={styles.contactInfoSection}>
@@ -41,7 +46,7 @@ const Contact = ({ theme }) => {
               <section key={index} className={styles.contactInfoField}>
                 {icon}
                 <section>
-                  <p>{type}</p>
+                  <p>{type[[languaje]]}</p>
                   {label.map((info, index2) => (
                     <h3 key={index2}>{info}</h3>
                   ))}

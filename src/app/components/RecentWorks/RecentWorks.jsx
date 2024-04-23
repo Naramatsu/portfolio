@@ -11,7 +11,7 @@ import {
 } from "./RecentWorks.data";
 import { DARK } from "@/utils/constants";
 
-const RecentWorks = ({ theme }) => {
+const RecentWorks = ({ theme, languaje }) => {
   const [activeTab, setActiveTab] = useState(filterOptions.at(0));
   const [projectsFiltered, setProjectsFiltered] = useState(projectList);
   const [selectorLeft, setSelectorLeft] = useState(0);
@@ -30,11 +30,11 @@ const RecentWorks = ({ theme }) => {
 
   return (
     <section
-      style={{ "--isDark": theme === DARK }}
+      style={{ "--isdark": theme === DARK ? 1 : 0 }}
       className={styles.recentWorks}
     >
-      <h2>{recentWorksTitle}</h2>
-      <p>{recentWorksDescription}</p>
+      <h2>{recentWorksTitle[languaje]}</h2>
+      <p>{recentWorksDescription[languaje]}</p>
       <section className={styles.filter}>
         {filterOptions.map((option, index) => (
           <p
@@ -53,7 +53,7 @@ const RecentWorks = ({ theme }) => {
             <Image src={project.img} alt={project.name} />
             <Link href={project.link} target="__blank">
               <h3>{project.name}</h3>
-              <p>{project.description}</p>
+              <p>{project.description[languaje]}</p>
             </Link>
           </section>
         ))}

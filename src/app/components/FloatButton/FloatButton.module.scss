@@ -1,0 +1,51 @@
+@import "../../../utils/constants.module.scss";
+
+.floatButton {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iconSetting,
+.iconSettingOpen,
+.themeIcon,
+.languajeIcon {
+  @include backgroundGradient;
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+  color: #fff;
+  transform: rotate(0);
+  transition: 0.25s ease-in-out all;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 10;
+}
+
+.iconSetting {
+  transform: rotate(135deg);
+
+  & ~ .themeIcon {
+    top: -60px;
+  }
+
+  & ~ .languajeIcon {
+    top: 60px;
+  }
+}
+
+.themeIcon,
+.languajeIcon {
+  @include displayFlex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  z-index: 9;
+}
+
+.languajeIcon {
+  transition-delay: 0.25s;
+}

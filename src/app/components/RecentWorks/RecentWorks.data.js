@@ -7,11 +7,19 @@ import JtytApp from "../../assets/projects/jtytApp.jpg";
 
 import CoachBootsUIUX from "../../assets/projects/coachbootsUIUX.jpg";
 import ShopAppUIUX from "../../assets/projects/shopUIUX.jpg";
+import { ENGLISH, SPANISH } from "@/utils/constants";
 
-export const recentWorksTitle = "My Recent Works";
+export const recentWorksTitle = {
+  [ENGLISH]: "My Recent Works",
+  [SPANISH]: "Trabajos recientes",
+};
 
-export const recentWorksDescription =
-  "We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.";
+export const recentWorksDescription = {
+  [ENGLISH]:
+    "Personal and customer projects you can see and try. Watch some of my skills.",
+  [SPANISH]:
+    "Proyectos personales y de clientes que puedes ver y probar. Mira algunas de mis habilidades.",
+};
 
 export const filterOptions = ["All", "Apps", "UI/UX"];
 
@@ -21,59 +29,87 @@ export const projectList = [
     name: "Kromac-UI",
     type: "Apps",
     link: "https://www.kromac-ui.com/",
-    description:
-      "100% responsive style framework that seeks to facilitate the development.",
+    description: {
+      [ENGLISH]:
+        "100% responsive style framework that seeks to facilitate the development and implementation of components.",
+      [SPANISH]:
+        "Framework de estilo 100% responsive que busca facilitar el desarrollo e implementación de componentes.",
+    },
   },
   {
     img: CoachBootsApp,
     name: "Coach Boots (in progress)",
     type: "Apps",
     link: "https://lolhugrock-deploy.vercel.app/",
-    description:
-      "League of Legends app for boosting or find coaching by profesionals.",
+    description: {
+      [ENGLISH]:
+        "League of Legends app for boosting or finding coaching by professionals.",
+      [SPANISH]:
+        "Aplicación League of Legends para impulsar o encontrar entrenamiento por parte de profesionales.",
+    },
   },
   {
     img: PokedexApp,
     name: "Pokedex",
     type: "Apps",
     link: "https://ciandt-tech-challenge-ten.vercel.app/",
-    description: "Pokedex to search, fav and fight.",
+    description: {
+      [ENGLISH]: "Pokedex to search, add favorites and fight.",
+      [SPANISH]: "Pokedex para buscar, añadir favoritos y luchar.",
+    },
   },
   {
     img: TripCalculatorApp,
     name: "Trip Calculator",
     type: "Apps",
     link: "https://challenge-jonathan-narvaez.vercel.app/",
-    description: "Simple App to calculate the distance between several points.",
+    description: {
+      [ENGLISH]: "Simple App to calculate the distance between several points.",
+      [SPANISH]: "App sencilla para calcular la distancia entre varios puntos.",
+    },
   },
   {
     img: WordPuzzleApp,
     name: "Word Puzzle",
     type: "Apps",
     link: "https://peacku-challenge-jonathan-narvaez.vercel.app/",
-    description: "Simple word puzzle to enjoin a little.",
+    description: {
+      [ENGLISH]: "Simple word puzzle to enjoy a little.",
+      [SPANISH]: "Sencillo rompecabezas de palabras para disfrutar un poco.",
+    },
   },
   {
     img: JtytApp,
     name: "Jowy Travels & Tours (in progress)",
     type: "Apps",
     link: "https://jowy-travel-tours-deploy.vercel.app/",
-    description:
-      "Turistic landingpage for turistic agency in Cartagena Colombia.",
+    description: {
+      [ENGLISH]:
+        "Touristic landing page for touristic agency in Cartagena Colombia.",
+      [SPANISH]:
+        "Landing page turístico para agencia de turismo en Cartagena Colombia.",
+    },
   },
   {
     img: CoachBootsUIUX,
     name: "Coach Boots (in progress)",
     type: "UI/UX",
     link: "https://www.figma.com/file/NBjXfncA7SYVflILQt7KgJ/LolHugrock?type=design&node-id=0%3A1&mode=design&t=L7xgFt938k0pgjWJ-1",
-    description:
-      "Coach boots UI/UX design: League of Legends app for boosting or find coaching by profesionals.",
+    description: {
+      [ENGLISH]:
+        "Coach boots UI/UX design: League of Legends app for boosting or finding coaching by professionals.",
+      [SPANISH]:
+        "Coach boots UI/UX diseño: Aplicación League of Legends para impulsar o encontrar entrenamiento por parte de profesionales.",
+    },
   },
   {
     img: ShopAppUIUX,
     name: "Shop App (In progress)",
     type: "UI/UX",
     link: "https://www.figma.com/file/2TKzvj2VWzVtMwrEpUfEJb/Untitled?type=design&node-id=0-1&mode=design&t=9xr19XqwJ0Ltg8Uw-0",
-    description: "Shop App UI/UX design.",
+    description: {
+      [ENGLISH]: "Shop App UI/UX design.",
+      [SPANISH]: "Diseñp (UI/UX) Aplicación para tiendas.",
+    },
   },
 ];
