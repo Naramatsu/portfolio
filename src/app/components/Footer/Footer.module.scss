@@ -1,0 +1,49 @@
+@import "../../../utils/constants.module.scss";
+
+.footer {
+  @include displayFlex;
+  flex-direction: column;
+  background-color: $terciaryColor;
+  width: 100%;
+  padding: 50px 0 20px 0;
+  color: #fff;
+  position: relative;
+
+  a {
+    img {
+      height: 150px;
+      width: fit-content;
+    }
+  }
+
+  ul {
+    @include ulHeaderHover;
+    margin-bottom: 30px;
+
+    li {
+      a {
+        color: #fff;
+        font-weight: 600;
+
+        &::before {
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+      }
+    }
+  }
+
+  p {
+    color: $primaryColor;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    ul {
+      flex-direction: column;
+    }
+  }
+}
