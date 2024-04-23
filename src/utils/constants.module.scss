@@ -33,6 +33,46 @@ $projectBackground: #140c1c;
   list-style: none;
 }
 
+@mixin ulHeaderHover {
+  @include displayFlex;
+  gap: 35px;
+  justify-content: flex-end;
+  list-style: none;
+
+  li {
+    height: 100%;
+    width: max-content;
+
+    a {
+      color: $terciaryColor;
+      font-weight: 600;
+      position: relative;
+
+      &::before {
+        @include backgroundGradient;
+        border-radius: 4px;
+        bottom: 6px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      a {
+        color: $primaryColor;
+
+        &::before {
+          @include activeTab;
+        }
+      }
+    }
+  }
+}
+
 @mixin textGradient {
   @include backgroundGradient;
   -webkit-background-clip: text;
@@ -80,5 +120,33 @@ $projectBackground: #140c1c;
   @media (max-width: 550px) {
     padding: 20px 15px;
     width: 100%;
+  }
+}
+
+@mixin btnHireMe {
+  @include displayFlex;
+  @include backgroundGradient;
+  align-items: center;
+  background-size: 200%;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin-left: 20px;
+  max-width: 135px;
+  min-width: 135px;
+  padding: 17px 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transform-origin: right;
+  transition: 0.4s all ease-in-out;
+
+  &:hover {
+    background-size: 150%;
+    transform-origin: left;
+    transition: 0.4s all ease-in-out;
   }
 }

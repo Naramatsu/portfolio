@@ -2,7 +2,7 @@
 
 .summary {
   padding-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 200px;
   position: relative;
   width: 100%;
 }
@@ -14,7 +14,7 @@
   opacity: 0.5;
   overflow: hidden;
   position: absolute;
-  top: 200px;
+  top: 300px;
   transform-origin: center;
   width: 100%;
   z-index: 0;
@@ -107,8 +107,8 @@
   @include displayFlex;
   margin: auto;
   margin-top: 70px;
-  width: 80%;
   padding-bottom: 50px;
+  width: 80%;
 
   section {
     @include displayFlex;
@@ -146,12 +146,8 @@
 }
 
 @media (max-width: 1024px) {
-  .summary {
-    padding-top: 50px;
-  }
-
   .imgPulse {
-    top: 150px;
+    top: 250px;
   }
 
   .sectionSummary {
