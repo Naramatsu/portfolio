@@ -1,0 +1,89 @@
+@import "../../../utils/constants.module.scss";
+
+.skills {
+  @include container;
+  padding: 120px 0;
+  position: relative;
+  text-align: center;
+
+  h2 {
+    @include titleGradient;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+
+.skillList {
+  @include displayFlex;
+  position: relative;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.skillItem {
+  @include displayFlex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  background-color: $softBgColor;
+  border-radius: 25px;
+  padding: 2em 40px;
+  transition: 0.5s ease-in-out all;
+  position: relative;
+  width: 180px;
+  height: 180px;
+
+  &::before {
+    @include backgroundGradient;
+    border-radius: 20px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.5s all ease-in-out;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  * {
+    z-index: 2;
+    cursor: default;
+  }
+
+  img {
+    height: 60px;
+    width: fit-content;
+    filter: grayscale(90%);
+  }
+
+  p {
+    color: $secundaryColor;
+    font-weight: 500;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      transition: 0.5s all ease-in-out;
+    }
+
+    img {
+      filter: grayscale(0);
+    }
+
+    p {
+      color: #fff;
+    }
+  }
+}
