@@ -1,6 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .summary {
+  @include themeStyles(var(--isDark), $bgRadialGradient);
   padding-bottom: 50px;
   padding-top: 200px;
   position: relative;
@@ -33,7 +34,7 @@
 
 .sectionSummary {
   h3 {
-    color: $terciaryColor;
+    @include fontColor(var(--isDark), $terciaryColor);
     font-size: 36px;
     margin-bottom: 10px;
   }
@@ -45,9 +46,11 @@
   }
 
   p {
+    @include fontColor(var(--isDark), $terciaryColor);
     font-size: 20px;
     font-weight: 300;
     max-width: 550px;
+    line-height: 1.5;
   }
 }
 
@@ -112,7 +115,7 @@
 
   section {
     @include displayFlex;
-    color: $terciaryColor;
+    @include fontColor(var(--isDark), $terciaryColor);
 
     h4 {
       color: $primaryColor;

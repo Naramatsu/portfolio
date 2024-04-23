@@ -1,6 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .recentWorks {
+  @include themeStyles(var(--isDark), $bgGRadientDark);
   position: relative;
   padding-top: 120px;
   padding-bottom: 80px;
@@ -13,6 +14,7 @@
     width: 80%;
 
     & + p {
+      @include fontColor(var(--isDark), $terciaryColor);
       width: 90%;
       margin: auto;
       margin-top: 15px;
@@ -22,14 +24,14 @@
 
 .filter {
   @include displayFlex;
+  @include themeStyles(var(--isDark), $darkBgColor, $softBgColor);
+  @include fontColor(var(--isDark), $primaryColor);
   justify-content: center;
-  background-color: $softBgColor;
   width: fit-content;
   margin: auto;
   margin-top: 50px;
   border-radius: 60px;
   position: relative;
-  color: $primaryColor;
 
   p {
     width: 100px;

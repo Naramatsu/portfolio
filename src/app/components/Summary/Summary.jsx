@@ -11,10 +11,11 @@ import {
   mediaLinks,
   quikDataInfo,
 } from "./Summary.data";
+import { DARK } from "@/utils/constants";
 
-const Summary = () => {
+const Summary = ({ theme }) => {
   return (
-    <main className={styles.summary}>
+    <main style={{ "--isDark": theme === DARK }} className={styles.summary}>
       <Image className={styles.imgPulse} src={Hi} alt="Hi" />
       <section className={styles.summaryContainer}>
         <section className={styles.sectionSummary}>

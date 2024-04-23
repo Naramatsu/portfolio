@@ -1,8 +1,12 @@
 @import "../../../utils/constants.module.scss";
 
 .skills {
-  @include container;
+  @include themeStyles(var(--isDark), $bgGRadientDark);
   padding: 120px 0;
+}
+
+.skillsContainer {
+  @include container;
   position: relative;
   text-align: center;
 
@@ -12,6 +16,7 @@
   }
 
   h5 {
+    @include fontColor(var(--isDark), $terciaryColor);
     max-width: 700px;
     margin: auto;
     font-size: 1em;
@@ -31,10 +36,10 @@
 
 .skillItem {
   @include displayFlex;
+  @include themeStyles(var(--isDark), $projectBackground, $softBgColor);
   flex-direction: column;
   gap: 15px;
   justify-content: center;
-  background-color: $softBgColor;
   border-radius: 25px;
   padding: 2em 40px;
   transition: 0.5s ease-in-out all;
@@ -68,7 +73,7 @@
   }
 
   p {
-    color: $secundaryColor;
+    @include fontColor(var(--isDark), $terciaryColor);
     font-weight: 500;
   }
 

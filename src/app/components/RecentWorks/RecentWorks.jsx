@@ -9,8 +9,9 @@ import {
   recentWorksDescription,
   recentWorksTitle,
 } from "./RecentWorks.data";
+import { DARK } from "@/utils/constants";
 
-const RecentWorks = () => {
+const RecentWorks = ({ theme }) => {
   const [activeTab, setActiveTab] = useState(filterOptions.at(0));
   const [projectsFiltered, setProjectsFiltered] = useState(projectList);
   const [selectorLeft, setSelectorLeft] = useState(0);
@@ -28,7 +29,10 @@ const RecentWorks = () => {
   };
 
   return (
-    <section className={styles.recentWorks}>
+    <section
+      style={{ "--isDark": theme === DARK }}
+      className={styles.recentWorks}
+    >
       <h2>{recentWorksTitle}</h2>
       <p>{recentWorksDescription}</p>
       <section className={styles.filter}>

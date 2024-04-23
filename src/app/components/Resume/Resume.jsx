@@ -11,8 +11,9 @@ import {
   resumeExperienceTitle,
 } from "./Resume.data";
 import ModalExperience from "../ModalExperience";
+import { DARK } from "@/utils/constants";
 
-const Resume = () => {
+const Resume = ({ theme }) => {
   const [showModal, setShowModal] = useState(false);
   const [experienceSelected, setExperienceSelected] = useState(null);
 
@@ -23,7 +24,7 @@ const Resume = () => {
   };
 
   return (
-    <section className={styles.resume}>
+    <section style={{ "--isDark": theme === DARK }} className={styles.resume}>
       <section className={styles.resumeContainer}>
         <section className={styles.resumeOverview}>
           <h2>{resumeExperienceTitle}</h2>

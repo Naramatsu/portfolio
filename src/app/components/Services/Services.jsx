@@ -5,10 +5,11 @@ import {
   servicesList,
   servicesTitleLabel,
 } from "./Services.data";
+import { DARK } from "@/utils/constants";
 
-const Services = () => {
+const Services = ({ theme }) => {
   return (
-    <section className={styles.services}>
+    <section style={{ "--isDark": theme === DARK }} className={styles.services}>
       <h2>{servicesTitleLabel}</h2>
       <p>{servicesDescription}</p>
       <section className={styles.servicesContainer}>

@@ -1,15 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Logo from "../../jcnm_logo.png";
+import LogoWhite from "../../jcnm_logo_white.png";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { routes } from "../Header/Header.data";
+import { DARK } from "@/utils/constants";
 
-const Footer = () => {
+const Footer = ({ theme }) => {
+  const LogoTheme = theme === DARK ? LogoWhite : Logo;
   return (
-    <section className={styles.footer}>
+    <section style={{ "--isDark": theme === DARK }} className={styles.footer}>
       <Link href="#">
-        <Image src={Logo} alt="logo" width={60} height={80} />
+        <Image src={LogoTheme} alt="logo" width={60} height={80} />
       </Link>
       <ul>
         {routes.map(({ link, label }, index) => (

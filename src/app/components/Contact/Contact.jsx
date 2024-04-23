@@ -9,10 +9,11 @@ import {
   emailFields,
   messageField,
 } from "./Contact.data";
+import { DARK } from "@/utils/constants";
 
-const Contact = () => {
+const Contact = ({ theme }) => {
   return (
-    <section className={styles.contact}>
+    <section style={{ "--isDark": theme === DARK }} className={styles.contact}>
       <section className={styles.contactContainer}>
         <section className={styles.contactEmailSection}>
           <h2>{contactTitle}</h2>

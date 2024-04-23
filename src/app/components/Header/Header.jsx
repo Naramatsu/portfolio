@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../jcnm_logo.png";
+import LogoWhite from "../../jcnm_logo_white.png";
 import styles from "./Header.module.scss";
 import { email, hireMeLabel, routes } from "./Header.data";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
+import { DARK } from "@/utils/constants";
 
 const linksListBuilder = (onClick, className) => (
   <ul>
@@ -24,14 +26,15 @@ const linksListBuilder = (onClick, className) => (
   </ul>
 );
 
-const Header = () => {
+const Header = ({ theme }) => {
   const [activeTab, setActiveTab] = useState("");
   const [activeNav, setActiveNav] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const LogoTheme = theme === DARK ? LogoWhite : Logo;
 
   useEffect(() => {
     const handlerScroll = addEventListener("scroll", () => {
-      setScrollY(window.scrollY);
+      setScrollY(window.scrollY || 0);
     });
     return () => {
       removeEventListener("scroll", handlerScroll);
@@ -52,11 +55,14 @@ const Header = () => {
     isOpen ? styles.hamburgerMenuOpen : styles.hamburgerMenuClose;
 
   return (
-    <header className={headerClassName()}>
+    <header
+      style={{ "--isDark": theme === DARK }}
+      className={headerClassName()}
+    >
       <section className={styles.headerContainer}>
         <section className={styles.logo}>
           <Link href="#">
-            <Image src={Logo} alt="logo" width={60} height={80} />
+            <Image src={LogoTheme} alt="logo" width={60} height={80} />
             <p>{email}</p>
           </Link>
         </section>
