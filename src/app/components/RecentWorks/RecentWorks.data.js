@@ -1,12 +1,12 @@
-import KromacUIApp from "../../kromac.png";
-import TripCalculatorApp from "../../tripCalculatorApp.png";
-import PokedexApp from "../../pokedexApp.png";
-import CoachBootsApp from "../../coachboostApp.jpg";
-import WordPuzzleApp from "../../wordpuzzleApp.jpg";
-import JtytApp from "../../jtytApp.jpg";
+import KromacUIApp from "../../assets/projects/kromac.png";
+import TripCalculatorApp from "../../assets/projects/tripCalculatorApp.png";
+import PokedexApp from "../../assets/projects/pokedexApp.png";
+import CoachBootsApp from "../../assets/projects/coachboostApp.jpg";
+import WordPuzzleApp from "../../assets/projects/wordpuzzleApp.jpg";
+import JtytApp from "../../assets/projects/jtytApp.jpg";
 
-import CoachBootsUIUX from "../../coachbootsUIUX.jpg";
-import ShopAppUIUX from "../../shopUIUX.jpg";
+import CoachBootsUIUX from "../../assets/projects/coachbootsUIUX.jpg";
+import ShopAppUIUX from "../../assets/projects/shopUIUX.jpg";
 
 export const recentWorksTitle = "My Recent Works";
 
