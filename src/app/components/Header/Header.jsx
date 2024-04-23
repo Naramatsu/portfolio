@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../jcnm_logo.png";
@@ -27,6 +27,20 @@ const linksListBuilder = (onClick, className) => (
 const Header = () => {
   const [activeTab, setActiveTab] = useState("");
   const [activeNav, setActiveNav] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handlerScroll = addEventListener("scroll", () => {
+      setScrollY(window.scrollY);
+    });
+    return () => {
+      removeEventListener("scroll", handlerScroll);
+    };
+  }, [scrollY]);
+
+  const headerClassName = () =>
+    scrollY > 100 ? styles.headerFixed : styles.headerTop;
+
   const isActiveTab = (tab) =>
     activeTab === tab ? styles.linkActive : styles.linkInactive;
 
@@ -38,32 +52,34 @@ const Header = () => {
     isOpen ? styles.hamburgerMenuOpen : styles.hamburgerMenuClose;
 
   return (
-    <header className={styles.header}>
-      <section className={styles.logo}>
-        <Link href="#">
-          <Image src={Logo} alt="logo" width={60} height={80} />
-          <p>{email}</p>
-        </Link>
-      </section>
-      <nav className={styles.nav}>
-        {linksListBuilder(handlerActiveTab, isActiveTab)}
-      </nav>
-      <section className={styles.buttonContainer}>
-        <button className={styles.btnHireMe}>{hireMeLabel}</button>
-        <section className={styles.hamburgerMenu}>
-          <section>
-            <RiMenu3Fill
-              className={isHamburguerMenuOpen(!activeNav)}
-              onClick={() => setActiveNav(true)}
-            />
-            <MdOutlineClose
-              className={isHamburguerMenuOpen(activeNav)}
-              onClick={() => setActiveNav(false)}
-            />
+    <header className={headerClassName()}>
+      <section className={styles.headerContainer}>
+        <section className={styles.logo}>
+          <Link href="#">
+            <Image src={Logo} alt="logo" width={60} height={80} />
+            <p>{email}</p>
+          </Link>
+        </section>
+        <nav className={styles.nav}>
+          {linksListBuilder(handlerActiveTab, isActiveTab)}
+        </nav>
+        <section className={styles.buttonContainer}>
+          <button className={styles.btnHireMe}>{hireMeLabel}</button>
+          <section className={styles.hamburgerMenu}>
+            <section>
+              <RiMenu3Fill
+                className={isHamburguerMenuOpen(!activeNav)}
+                onClick={() => setActiveNav(true)}
+              />
+              <MdOutlineClose
+                className={isHamburguerMenuOpen(activeNav)}
+                onClick={() => setActiveNav(false)}
+              />
+            </section>
+            <nav className={navStyles()}>
+              {linksListBuilder(navStyles, navStyles)}
+            </nav>
           </section>
-          <nav className={navStyles()}>
-            {linksListBuilder(navStyles, navStyles)}
-          </nav>
         </section>
       </section>
     </header>
