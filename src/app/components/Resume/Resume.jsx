@@ -65,7 +65,7 @@ const Resume = ({ theme, languaje }) => {
           <section className={styles.resumeCertificationList}>
             {certificationList.map(({ title, link }, index) => (
               <section key={index} className={styles.certificationItems}>
-                <Link href={link} target="__blank" rel="noreferrer">
+                <Link href={link} target="_blank" rel="noreferrer">
                   {title}
                 </Link>
               </section>

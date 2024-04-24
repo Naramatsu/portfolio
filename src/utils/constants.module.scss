@@ -3,6 +3,26 @@ $primaryColor: #b6138e;
 $secundaryColor: #29095d;
 $terciaryColor: #2a1454;
 $softBgColor: #f6f3fc;
+$bgGRadientLight: linear-gradient(
+  245deg,
+  rgba(
+      $color: $primaryColor,
+      $alpha: 0.1,
+    )
+    0%,
+  $softBgColor 20%,
+  #fff 100%
+);
+$bgLightRadialGradient: radial-gradient(
+  circle,
+  rgba(
+      $color: $primaryColor,
+      $alpha: 0.2,
+    )
+    0%,
+  $softBgColor 20%,
+  #fff 100%
+);
 
 // Dark Theme
 $primaryDarkColor: #6f0d57;
@@ -10,19 +30,19 @@ $secundaryDarkColor: #160334;
 $heavyBgColor: #0f0715;
 $terciaryDarkBgColor: #050709;
 $darkBgColor: #000;
-$bgRadialGradient: radial-gradient(
+$bgDarkRadialGradient: radial-gradient(
   circle,
   $terciaryColor 0%,
   $heavyBgColor 30%,
   $terciaryDarkBgColor 100%
 );
-
 $bgGRadientDark: linear-gradient(
   245deg,
   $terciaryColor 0%,
   $heavyBgColor 30%,
   $terciaryDarkBgColor 100%
 );
+
 $projectBackground: #140c1c;
 
 @mixin container {

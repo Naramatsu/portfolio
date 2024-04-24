@@ -1,5 +1,38 @@
 import { ENGLISH, SPANISH } from "@/utils/constants";
 
+const reactCertification = new URL(
+  "../../../../public/documents/reactC.png",
+  import.meta.url
+);
+const reactDesignPatternsCertification = new URL(
+  "../../../../public/documents/designPatternC.png",
+  import.meta.url
+);
+const reduxCertification = new URL(
+  "../../../../public/documents/reduxC.png",
+  import.meta.url
+);
+const typeScriptCertification = new URL(
+  "../../../../public/documents/typeScriptC.png",
+  import.meta.url
+);
+const reactNativeCertification = new URL(
+  "../../../../public/documents/reactNativeC.png",
+  import.meta.url
+);
+const graphQLCertification = new URL(
+  "../../../../public/documents/graphQlC.png",
+  import.meta.url
+);
+const uxCertification = new URL(
+  "../../../../public/documents/uxC.png",
+  import.meta.url
+);
+const figmaCertification = new URL(
+  "../../../../public/documents/figmaC.png",
+  import.meta.url
+);
+
 export const resumeExperienceTitle = {
   [ENGLISH]: "My Experience",
   [SPANISH]: "Mi Experiencia",
@@ -251,35 +284,35 @@ export const resumeCertificationsTitle = {
 
 export const certificationList = [
   {
-    title: "Software Design Patterns",
-    link: "#",
+    title: "React Js",
+    link: reactCertification,
+  },
+  {
+    title: "React: Design Patterns",
+    link: reactDesignPatternsCertification,
   },
   {
     title: "Redux",
-    link: "#",
-  },
-  {
-    title: "NextJS",
-    link: "#",
+    link: reduxCertification,
   },
   {
     title: "TypeScript",
-    link: "#",
+    link: typeScriptCertification,
   },
   {
     title: "React Native",
-    link: "#",
+    link: reactNativeCertification,
   },
   {
     title: "GraphQL",
-    link: "#",
+    link: graphQLCertification,
   },
   {
     title: "User Experience Design",
-    link: "#",
+    link: uxCertification,
   },
   {
     title: "Figma",
-    link: "#",
+    link: figmaCertification,
   },
 ];

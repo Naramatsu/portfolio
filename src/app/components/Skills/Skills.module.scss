@@ -1,7 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .skills {
-  @include themeStyles(var(--isdark), $bgGRadientDark, #fff);
+  @include themeStyles(var(--isdark), $bgGRadientDark, $bgGRadientLight);
   padding: 120px 0;
 }
 

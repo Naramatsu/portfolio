@@ -51,7 +51,7 @@ const RecentWorks = ({ theme, languaje }) => {
         {projectsFiltered.map((project, index) => (
           <section key={index} className={styles.projectContainer}>
             <Image src={project.img} alt={project.name} />
-            <Link href={project.link} target="__blank">
+            <Link href={project.link} target="_blank">
               <h3>{project.name}</h3>
               <p>{project.description[languaje]}</p>
             </Link>

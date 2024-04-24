@@ -72,7 +72,7 @@ const Header = ({ theme, languaje }) => {
         <section className={styles.buttonContainer}>
           <Link
             href={whatsAppLink}
-            target="__blank"
+            target="_blank"
             className={styles.btnHireMe}
           >
             {hireMeLabel[languaje]}

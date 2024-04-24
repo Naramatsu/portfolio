@@ -1,7 +1,7 @@
 @import "../../../utils/constants.module.scss";
 
 .recentWorks {
-  @include themeStyles(var(--isdark), $bgGRadientDark, #fff);
+  @include themeStyles(var(--isdark), $bgGRadientDark, $bgGRadientLight);
   position: relative;
   padding-top: 120px;
   padding-bottom: 80px;

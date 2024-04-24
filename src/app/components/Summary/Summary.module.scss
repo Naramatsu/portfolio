@@ -1,7 +1,11 @@
 @import "../../../utils/constants.module.scss";
 
 .summary {
-  @include themeStyles(var(--isdark), $bgRadialGradient, #fff);
+  @include themeStyles(
+    var(--isdark),
+    $bgDarkRadialGradient,
+    $bgLightRadialGradient
+  );
   padding-bottom: 50px;
   padding-top: 200px;
   position: relative;

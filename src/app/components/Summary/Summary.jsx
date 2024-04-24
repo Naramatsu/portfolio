@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./Summary.module.scss";
 import Image from "next/image";
@@ -13,10 +14,15 @@ import {
 } from "./Summary.data";
 import { DARK } from "@/utils/constants";
 
+const curriculum = new URL(
+  "../../../../public/documents/curriculum.pdf",
+  import.meta.url
+);
+
 const Summary = ({ theme, languaje }) => {
   return (
     <main
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
+      style={{ "--isdark": theme === DARK ? "true" : "false" }}
       className={styles.summary}
     >
       <Image className={styles.imgPulse} src={Hi} alt="Hi" />
@@ -24,13 +30,20 @@ const Summary = ({ theme, languaje }) => {
         <section className={styles.sectionSummary}>
           {introduction[languaje]}
           <section className={styles.sectionButtons}>
-            <Link className={styles.btnDownloadCV} href="#">
+            <Link
+              className={styles.btnDownloadCV}
+              target="_blank"
+              rel="noopener noreferrer"
+              locale={false}
+              download="JonathanCamiloNarvaezMartinez[CV].pdf"
+              href={curriculum}
+            >
               {downloadCvLabel[languaje]} <AiOutlineDownload />
             </Link>
             <ul>
               {mediaLinks.map(({ link, icon }, index) => (
                 <li key={index}>
-                  <Link href={link} target="__blank">
+                  <Link href={link} target="_blank">
                     {icon}
                   </Link>
                 </li>
