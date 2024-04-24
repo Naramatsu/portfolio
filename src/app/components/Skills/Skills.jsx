@@ -6,11 +6,10 @@ import { skillsDescription, skillsList, skillsTitle } from "./Skills.data";
 import { DARK } from "@/utils/constants";
 
 const Skills = ({ theme, languaje }) => {
+  const skillsClassName = theme === DARK ? styles.skillsDark : styles.skills;
+
   return (
-    <section
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={styles.skills}
-    >
+    <section className={skillsClassName}>
       <section className={styles.skillsContainer}>
         <h2>{skillsTitle[languaje]}</h2>
         <h5>{skillsDescription[languaje]}</h5>

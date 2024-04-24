@@ -1,9 +1,43 @@
 @import "../../../utils/constants.module.scss";
 
-.contact {
-  @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
+.contact,
+.contactDark {
+  @include themeStyles($softBgColor);
   padding: 120px 0;
   width: 100%;
+}
+
+.contactDark {
+  @include themeStyles($darkBgColor);
+
+  .contactContainer {
+    p {
+      color: #fff;
+    }
+  }
+
+  .contactEmailSection {
+    @include themeStyles($projectBackground);
+  }
+
+  .fieldcontrol {
+    input {
+      @include themeStyles($darkBgColor);
+    }
+  }
+
+  .textAreaFieldcontrol {
+    textarea {
+      @include themeStyles($darkBgColor);
+    }
+  }
+
+  .contactInfoField {
+    p,
+    h3 {
+      color: #fff;
+    }
+  }
 }
 
 .contactContainer {
@@ -14,12 +48,12 @@
   position: relative;
 
   p {
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
   }
 }
 
 .contactEmailSection {
-  @include themeStyles(var(--isdark), $projectBackground, #fff);
+  @include themeStyles(#fff);
   border-radius: 20px;
   padding: 40px;
   position: relative;
@@ -54,7 +88,7 @@
   }
 
   input {
-    @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
+    @include themeStyles($softBgColor);
     border: solid 1px $secundaryColor;
     border-radius: 5px;
     padding: 1em;
@@ -72,7 +106,7 @@
   }
 
   textarea {
-    @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
+    @include themeStyles($softBgColor);
     border: solid 1px $secundaryColor;
     border-radius: 5px;
     height: 200px;
@@ -118,7 +152,7 @@
 
   p,
   h3 {
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
     line-height: 1.5;
   }
 }

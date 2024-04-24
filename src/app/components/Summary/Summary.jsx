@@ -20,11 +20,10 @@ const curriculum = new URL(
 );
 
 const Summary = ({ theme, languaje }) => {
+  const summaryClassName = theme === DARK ? styles.summaryDark : styles.summary;
+
   return (
-    <main
-      style={{ "--isdark": theme === DARK ? "true" : "false" }}
-      className={styles.summary}
-    >
+    <main className={summaryClassName}>
       <Image className={styles.imgPulse} src={Hi} alt="Hi" />
       <section className={styles.summaryContainer}>
         <section className={styles.sectionSummary}>

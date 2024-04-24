@@ -17,6 +17,7 @@ import Link from "next/link";
 const Resume = ({ theme, languaje }) => {
   const [showModal, setShowModal] = useState(false);
   const [experienceSelected, setExperienceSelected] = useState(null);
+  const resumeClassName = theme === DARK ? styles.resumeDark : styles.resume;
 
   const handlerShowModal = (info) => {
     if (showModal) return setShowModal(false);
@@ -25,10 +26,7 @@ const Resume = ({ theme, languaje }) => {
   };
 
   return (
-    <section
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={styles.resume}
-    >
+    <section className={resumeClassName}>
       <section className={styles.resumeContainer}>
         <section className={styles.resumeOverview}>
           <h2>{resumeExperienceTitle[languaje]}</h2>

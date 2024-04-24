@@ -8,11 +8,11 @@ import {
 import { DARK } from "@/utils/constants";
 
 const Services = ({ theme, languaje }) => {
+  const servicesClassName =
+    theme === DARK ? styles.servicesDark : styles.services;
+
   return (
-    <section
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={styles.services}
-    >
+    <section className={servicesClassName}>
       <h2>{servicesTitleLabel[languaje]}</h2>
       <p>{servicesDescription[languaje]}</p>
       <section className={styles.servicesContainer}>

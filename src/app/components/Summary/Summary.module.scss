@@ -1,15 +1,29 @@
 @import "../../../utils/constants.module.scss";
 
-.summary {
-  @include themeStyles(
-    var(--isdark),
-    $bgDarkRadialGradient,
-    $bgLightRadialGradient
-  );
+.summary,
+.summaryDark {
+  @include themeStyles($bgLightRadialGradient);
   padding-bottom: 50px;
   padding-top: 200px;
   position: relative;
   width: 100%;
+}
+
+.summaryDark {
+  @include themeStyles($bgDarkRadialGradient);
+
+  .sectionSummary {
+    h3,
+    p {
+      color: #fff;
+    }
+  }
+
+  .quickDataSection {
+    section {
+      color: #fff;
+    }
+  }
 }
 
 .imgPulse {
@@ -38,7 +52,7 @@
 
 .sectionSummary {
   h3 {
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
     font-size: 36px;
     margin-bottom: 10px;
   }
@@ -50,7 +64,7 @@
   }
 
   p {
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
     font-size: 20px;
     font-weight: 300;
     max-width: 550px;
@@ -119,7 +133,7 @@
 
   section {
     @include displayFlex;
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
 
     h4 {
       color: $primaryColor;

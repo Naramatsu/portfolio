@@ -9,11 +9,10 @@ import { DARK } from "@/utils/constants";
 
 const Footer = ({ theme, languaje }) => {
   const LogoTheme = theme === DARK ? LogoWhite : Logo;
+  const footerClassName = theme === DARK ? styles.footerDark : styles.footer;
+
   return (
-    <section
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={styles.footer}
-    >
+    <section className={footerClassName}>
       <Link href="#">
         <Image src={LogoTheme} alt="logo" width={60} height={80} />
       </Link>

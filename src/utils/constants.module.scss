@@ -10,7 +10,7 @@ $bgGRadientLight: linear-gradient(
       $alpha: 0.1,
     )
     0%,
-  $softBgColor 20%,
+  #fff 20%,
   #fff 100%
 );
 $bgLightRadialGradient: radial-gradient(
@@ -85,7 +85,7 @@ $projectBackground: #140c1c;
     width: max-content;
 
     a {
-      @include fontColor(var(--isdark), $terciaryColor);
+      color: $terciaryColor;
       font-weight: 600;
       position: relative;
 
@@ -196,16 +196,12 @@ $projectBackground: #140c1c;
   background: radial-gradient(circle, $primaryColor 1%, $secundaryColor 100%);
 }
 
-@mixin themeStyles($isdark, $bgdark, $bglight) {
-  @if $isdark == 1 {
-    background: $bgdark;
-  } @else {
-    background: $bglight;
-  }
+@mixin themeStyles($bgdark) {
+  background: $bgdark;
 }
 
 @mixin fontColor($isdark, $color) {
-  @if $isdark == 1 {
+  @if $isdark {
     color: #fff;
   } @else {
     color: $color;

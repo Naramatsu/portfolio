@@ -1,9 +1,29 @@
 @import "../../../utils/constants.module.scss";
 
-.resume {
-  @include themeStyles(var(--isdark), $darkBgColor, $softBgColor);
+.resume,
+.resumeDark {
+  @include themeStyles($softBgColor);
   padding: 120px 0;
   width: 100%;
+}
+
+.resumeDark {
+  @include themeStyles($darkBgColor);
+
+  .resumeItem {
+    @include themeStyles($projectBackground);
+
+    h3,
+    p {
+      color: #fff;
+    }
+  }
+
+  .certificationItems {
+    a {
+      color: #fff;
+    }
+  }
 }
 
 .resumeContainer {
@@ -30,7 +50,7 @@
 }
 
 .resumeItem {
-  @include themeStyles(var(--isdark), $projectBackground, #fff);
+  @include themeStyles(#fff);
   border-radius: 20px;
   cursor: default;
   padding: 30px 20px;
@@ -68,14 +88,14 @@
   }
 
   h3 {
-    @include fontColor(var(--isdark), $secundaryColor);
+    color: $secundaryColor;
     font-size: 25px;
     margin: 8px 0;
     text-transform: uppercase;
   }
 
   p {
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
   }
 
   &:hover {
@@ -112,7 +132,7 @@
   text-align: center;
 
   a {
-    @include fontColor(var(--isdark), $terciaryColor);
+    color: $terciaryColor;
     width: 100%;
   }
 }

@@ -12,11 +12,10 @@ import {
 import { DARK } from "@/utils/constants";
 
 const Contact = ({ theme, languaje }) => {
+  const contactClassName = theme === DARK ? styles.contactDark : styles.contact;
+
   return (
-    <section
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={styles.contact}
-    >
+    <section className={contactClassName}>
       <section className={styles.contactContainer}>
         <section className={styles.contactEmailSection}>
           <h2>{contactTitle[languaje]}</h2>

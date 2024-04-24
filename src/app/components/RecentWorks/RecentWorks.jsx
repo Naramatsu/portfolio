@@ -16,6 +16,9 @@ const RecentWorks = ({ theme, languaje }) => {
   const [projectsFiltered, setProjectsFiltered] = useState(projectList);
   const [selectorLeft, setSelectorLeft] = useState(0);
 
+  const recentWorksClassName =
+    theme === DARK ? styles.recentWorksDark : styles.recentWorks;
+
   const isActiveTab = (tab) => (activeTab === tab ? styles.active : styles.p);
 
   const handlerFilter = (tab) => {
@@ -29,10 +32,7 @@ const RecentWorks = ({ theme, languaje }) => {
   };
 
   return (
-    <section
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={styles.recentWorks}
-    >
+    <section className={recentWorksClassName}>
       <h2>{recentWorksTitle[languaje]}</h2>
       <p>{recentWorksDescription[languaje]}</p>
       <section className={styles.filter}>

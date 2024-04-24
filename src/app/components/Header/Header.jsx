@@ -41,8 +41,12 @@ const Header = ({ theme, languaje }) => {
     };
   }, [scrollY]);
 
-  const headerClassName = () =>
-    scrollY > 100 ? styles.headerFixed : styles.headerTop;
+  const headerClassName = () => {
+    if (theme === DARK) {
+      return scrollY > 100 ? styles.headerFixedDark : styles.headerTopDark;
+    }
+    return scrollY > 100 ? styles.headerFixed : styles.headerTop;
+  };
 
   const isActiveTab = (tab) =>
     activeTab === tab ? styles.linkActive : styles.linkInactive;
@@ -55,10 +59,7 @@ const Header = ({ theme, languaje }) => {
     isOpen ? styles.hamburgerMenuOpen : styles.hamburgerMenuClose;
 
   return (
-    <header
-      style={{ "--isdark": theme === DARK ? 1 : 0 }}
-      className={headerClassName()}
-    >
+    <header className={headerClassName()}>
       <section className={styles.headerContainer}>
         <section className={styles.logo}>
           <Link href="#">
