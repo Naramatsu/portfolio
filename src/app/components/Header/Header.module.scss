@@ -27,7 +27,8 @@
   @include themeStyles($darkBgColor);
 }
 
-.headerTopDark {
+.headerTopDark,
+.headerTop {
   @include themeStyles(transparent);
 }
 
