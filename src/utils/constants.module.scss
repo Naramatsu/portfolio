@@ -104,7 +104,7 @@ $projectBackground: #140c1c;
 
     &:hover {
       a {
-        @include fontColor(var(--isdark), $primaryColor);
+        color: $primaryColor;
 
         &::before {
           @include activeTab;

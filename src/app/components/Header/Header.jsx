@@ -62,7 +62,7 @@ const Header = ({ theme, languaje }) => {
     <header className={headerClassName()}>
       <section className={styles.headerContainer}>
         <section className={styles.logo}>
-          <Link href="#">
+          <Link href="#summary" onClick={() => handlerActiveTab("")}>
             <Image src={LogoTheme} alt="logo" width={60} height={80} />
             <p>{email}</p>
           </Link>

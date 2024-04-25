@@ -29,7 +29,7 @@
 .imgPulse {
   animation: pulse 4s ease-in-out infinite;
   height: 300px;
-  left: 0;
+  left: -10%;
   opacity: 0.5;
   overflow: hidden;
   position: absolute;
@@ -245,7 +245,8 @@
   }
 
   .imgPulse {
-    top: 550px;
+    top: 650px;
+    left: 0;
   }
 
   .sectionSummary {

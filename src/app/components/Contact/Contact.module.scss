@@ -185,9 +185,20 @@
 }
 
 @media (max-width: 600px) {
+  .contactContainer {
+    max-width: 100%;
+  }
+
   .fieldContainer {
-    grid-template-columns: 1fr;
+    @include displayFlex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
+  }
+
+  .btnSendMessage {
+    width: 100%;
+    min-width: 100%;
   }
 }
 

@@ -187,13 +187,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .serviceTab {
-    height: 200px;
+    height: 250px;
+    justify-content: center;
   }
 
   .selector {
-    height: 200px;
+    height: 250px;
   }
 
   .servicesContainer {
@@ -201,11 +202,11 @@
 
     .serviceTab {
       &:nth-child(2):hover ~ .selector {
-        top: 200px;
+        top: 250px;
       }
 
       &:nth-child(3):hover ~ .selector {
-        top: 350px;
+        top: 400px;
       }
     }
   }

@@ -9,7 +9,7 @@ const Skills = ({ theme, languaje }) => {
   const skillsClassName = theme === DARK ? styles.skillsDark : styles.skills;
 
   return (
-    <section className={skillsClassName}>
+    <main id="skills" className={skillsClassName}>
       <section className={styles.skillsContainer}>
         <h2>{skillsTitle[languaje]}</h2>
         <h5>{skillsDescription[languaje]}</h5>
@@ -22,7 +22,7 @@ const Skills = ({ theme, languaje }) => {
           ))}
         </section>
       </section>
-    </section>
+    </main>
   );
 };
 

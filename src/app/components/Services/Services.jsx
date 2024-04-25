@@ -12,7 +12,7 @@ const Services = ({ theme, languaje }) => {
     theme === DARK ? styles.servicesDark : styles.services;
 
   return (
-    <section className={servicesClassName}>
+    <main id="services" className={servicesClassName}>
       <h2>{servicesTitleLabel[languaje]}</h2>
       <p>{servicesDescription[languaje]}</p>
       <section className={styles.servicesContainer}>
@@ -25,7 +25,7 @@ const Services = ({ theme, languaje }) => {
         ))}
         <section className={styles.selector} />
       </section>
-    </section>
+    </main>
   );
 };
 

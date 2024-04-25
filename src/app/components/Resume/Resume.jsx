@@ -26,7 +26,7 @@ const Resume = ({ theme, languaje }) => {
   };
 
   return (
-    <section className={resumeClassName}>
+    <main id="experience" className={resumeClassName}>
       <section className={styles.resumeContainer}>
         <section className={styles.resumeOverview}>
           <h2>{resumeExperienceTitle[languaje]}</h2>
@@ -77,7 +77,7 @@ const Resume = ({ theme, languaje }) => {
         languaje={languaje}
         onClose={() => setShowModal(false)}
       />
-    </section>
+    </main>
   );
 };
 

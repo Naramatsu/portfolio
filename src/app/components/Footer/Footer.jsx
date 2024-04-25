@@ -13,7 +13,7 @@ const Footer = ({ theme, languaje }) => {
 
   return (
     <section className={footerClassName}>
-      <Link href="#">
+      <Link href="#summary">
         <Image src={LogoTheme} alt="logo" width={60} height={80} />
       </Link>
       <ul>

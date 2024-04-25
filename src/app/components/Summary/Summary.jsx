@@ -23,7 +23,7 @@ const Summary = ({ theme, languaje }) => {
   const summaryClassName = theme === DARK ? styles.summaryDark : styles.summary;
 
   return (
-    <main className={summaryClassName}>
+    <main id="summary" className={summaryClassName}>
       <Image className={styles.imgPulse} src={Hi} alt="Hi" />
       <section className={styles.summaryContainer}>
         <section className={styles.sectionSummary}>

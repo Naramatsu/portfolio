@@ -7,9 +7,9 @@ export const servicesTitleLabel = {
 
 export const servicesDescription = {
   [ENGLISH]:
-    "Engaged in building highly scalable frontend components and standardizing backend APIs to accelerate programming.",
+    "Engaged in creating highly scalable frontend components and standardizing APIs on the backend to accelerate programming.",
   [SPANISH]:
-    "Comprometido en la construcción de componentes frontend altamente escalables y estandarización de API backend para acelerar la programación.",
+    "Comprometido en la creación de componentes frontend altamente escalables y la estandarización de APIs en el backend para acelerar la programación.",
 };
 
 export const servicesList = [

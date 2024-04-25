@@ -15,7 +15,7 @@ const Contact = ({ theme, languaje }) => {
   const contactClassName = theme === DARK ? styles.contactDark : styles.contact;
 
   return (
-    <section className={contactClassName}>
+    <main id="contact" className={contactClassName}>
       <section className={styles.contactContainer}>
         <section className={styles.contactEmailSection}>
           <h2>{contactTitle[languaje]}</h2>
@@ -55,7 +55,7 @@ const Contact = ({ theme, languaje }) => {
           </section>
         </section>
       </section>
-    </section>
+    </main>
   );
 };
 

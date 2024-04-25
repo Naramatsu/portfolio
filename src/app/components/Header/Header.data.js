@@ -2,29 +2,29 @@ import { ENGLISH, SPANISH } from "@/utils/constants";
 
 export const routes = [
   {
-    link: "/services",
+    link: "#services",
     label: {
       [ENGLISH]: "Services",
       [SPANISH]: "Servicios",
     },
   },
   {
-    link: "/works",
+    link: "#works",
     label: { [ENGLISH]: "Works", [SPANISH]: "Trabajos" },
   },
   {
-    link: "/experience",
+    link: "#experience",
     label: {
       [ENGLISH]: "Experience",
       [SPANISH]: "Experiencia",
     },
   },
   {
-    link: "/skills",
+    link: "#skills",
     label: { [ENGLISH]: "Skills", [SPANISH]: "Habilidades" },
   },
   {
-    link: "/contact",
+    link: "#contact",
     label: { [ENGLISH]: "Contact", [SPANISH]: "Contacto" },
   },
 ];

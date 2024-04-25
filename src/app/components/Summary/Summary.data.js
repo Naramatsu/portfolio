@@ -17,7 +17,7 @@ export const introduction = {
       </h1>
       <p>
         Able to create, modify, fix and test frontend functions, integrating
-        APIs and ensuring high performance and user experience.
+        APIs and ensuring high performance and good user experience.
       </p>
     </>
   ),
@@ -30,9 +30,9 @@ export const introduction = {
         Frontend Developer
       </h1>
       <p>
-        Capaz de crear, modificar, corregir y probar funciones frontend,
-        integrando API y garantizando un alto rendimiento y experiencia de
-        usuario.
+        Capaz de crear, modificar, arreglar y probar funciones frontend,
+        integrando API y garantizando un alto rendimiento y una buena
+        experiencia de usuario.
       </p>
     </>
   ),

@@ -32,7 +32,7 @@ const RecentWorks = ({ theme, languaje }) => {
   };
 
   return (
-    <section className={recentWorksClassName}>
+    <main id="works" className={recentWorksClassName}>
       <h2>{recentWorksTitle[languaje]}</h2>
       <p>{recentWorksDescription[languaje]}</p>
       <section className={styles.filter}>
@@ -58,7 +58,7 @@ const RecentWorks = ({ theme, languaje }) => {
           </section>
         ))}
       </section>
-    </section>
+    </main>
   );
 };
 
