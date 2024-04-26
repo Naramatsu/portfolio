@@ -92,7 +92,7 @@ const Contact = ({ theme, languaje }) => {
           </section>
         </section>
       </section>
-      {toastProps.visible && <Toast {...toastProps} />}
+      <Toast {...toastProps} />
     </main>
   );
 };
