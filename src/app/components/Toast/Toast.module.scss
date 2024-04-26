@@ -1,0 +1,50 @@
+@import "../../../utils/constants.module.scss";
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 50;
+  min-width: 350px;
+  opacity: 1;
+  transition: 0.5s ease-in-out all;
+  height: 100px;
+  transform-origin: center bottom;
+  transform: translateY(0);
+  color: #fff;
+
+  cursor: default;
+
+  * {
+    cursor: default;
+  }
+}
+
+.toastOpen,
+.toastClose {
+  @extend .toast;
+}
+
+.toastClose {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.h3 {
+  @include displayFlex;
+  justify-content: flex-start;
+  background-color: #055d0d;
+  width: 100%;
+  height: 100%;
+  padding: 1em 2em;
+  border-radius: 20px;
+}
+
+.success,
+.error {
+  @extend .h3;
+}
+
+.error {
+  background-color: #5d0505;
+}
