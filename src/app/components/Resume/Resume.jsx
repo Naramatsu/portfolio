@@ -76,6 +76,7 @@ const Resume = ({ theme, languaje }) => {
         info={experienceSelected}
         languaje={languaje}
         onClose={() => setShowModal(false)}
+        theme={theme}
       />
     </main>
   );

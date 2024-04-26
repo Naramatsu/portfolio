@@ -12,18 +12,40 @@
 }
 
 .modalOpen,
-.modalClose {
+.modalClose,
+.modalOpenDark,
+.modalCloseDark {
   @extend .modal;
 }
 
-.modalOpen {
+.modalOpen,
+.modalOpenDark {
   opacity: 1;
   transform: scale(1);
 }
 
-.modalClose {
+.modalClose,
+.modalCloseDark {
   opacity: 0;
   transform: scale(0);
+}
+
+.modalOpenDark {
+  .modalContainer {
+    background-color: $heavyBgColor;
+
+    h4,
+    h5,
+    p {
+      color: #fff;
+    }
+
+    ul {
+      li {
+        -webkit-text-fill-color: #fff;
+      }
+    }
+  }
 }
 
 .modalContainer {
