@@ -74,3 +74,14 @@ export const contactInfoList = [
     label: ["Colombia. Cartagena - Bolivar"],
   },
 ];
+
+export const toastMessageSuccess = {
+  [ENGLISH]: "Email sent successfully, Thanks for reach me!!!",
+  [SPANISH]: "Email enviado correctamente. ¡¡¡Gracias por contactarme!!!",
+};
+
+export const toastMessageError = {
+  [ENGLISH]: "Oops, There was an error, please check the form and try again!!!",
+  [SPANISH]:
+    "Oops, hubo un error, verifique el formulario e inténtelo nuevamente.",
+};
