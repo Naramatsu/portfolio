@@ -2,13 +2,13 @@
 import React, { useReducer } from "react";
 import AppReducer from "./reducer";
 import { AppContext } from ".";
-import { ENGLISH, LIGHT } from "@/utils/constants";
+import { DARK, ENGLISH } from "@/utils/constants";
 import { SET_LANGUAJE, SET_THEME } from "./types";
 
 const AppState = ({ children }) => {
   const initialState = {
     languaje: ENGLISH,
-    theme: LIGHT,
+    theme: DARK,
   };
   const [globalState, dispatch] = useReducer(AppReducer, initialState);
 
