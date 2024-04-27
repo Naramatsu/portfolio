@@ -35,6 +35,7 @@ const Resume = ({ theme, languaje }) => {
               <section
                 key={index}
                 className={styles.resumeItem}
+                style={{ cursor: "pointer" }}
                 onClick={() =>
                   handlerShowModal({ ...info, period, title, company })
                 }
