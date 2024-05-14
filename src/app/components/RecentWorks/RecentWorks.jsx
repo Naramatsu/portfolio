@@ -9,6 +9,7 @@ import {
   recentWorksDescription,
   recentWorksTitle,
 } from "./RecentWorks.data";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { DARK } from "@/utils/constants";
 
 const RecentWorks = ({ theme, languaje }) => {
@@ -53,6 +54,7 @@ const RecentWorks = ({ theme, languaje }) => {
             <Image src={project.img} alt={project.name} />
             <Link href={project.link} target="_blank">
               <h3>{project.name}</h3>
+              <FaExternalLinkAlt />
               <p>{project.description[languaje]}</p>
             </Link>
           </section>

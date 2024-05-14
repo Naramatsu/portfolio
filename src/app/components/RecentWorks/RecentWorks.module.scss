@@ -92,6 +92,13 @@
     margin: auto;
   }
 
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+  }
+
   &:hover > a {
     bottom: 20px;
     opacity: 1;
