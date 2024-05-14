@@ -56,6 +56,21 @@ textarea {
   font-family: "Sora", sans-serif;
 }
 
+html::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+  background: #08070c;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #b6138e9c;
+  transition: 0.25s all ease-in-out;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #b6138e;
+}
+
 a,
 button {
   color: inherit;
