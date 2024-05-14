@@ -205,5 +205,12 @@
 @media (max-width: 550px) {
   .contactContainer {
     width: 90%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .contactEmailSection {
+    padding: 2em;
   }
 }

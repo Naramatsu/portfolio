@@ -23,7 +23,7 @@ const Footer = ({ theme, languaje }) => {
           </li>
         ))}
       </ul>
-      <p>© 2024 All rights reserved</p>
+      <p>Jonathan Camilo Narvaez Martinez</p>
     </section>
   );
 };
