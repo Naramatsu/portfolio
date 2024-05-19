@@ -48,7 +48,7 @@ const RecentWorks = ({ theme, languaje }) => {
         ))}
         <p style={{ "--i": selectorLeft }} className={styles.selector} />
       </section>
-      <section className={styles.projectsList}>
+      <article className={styles.projectsList}>
         {projectsFiltered.map((project, index) => (
           <section key={index} className={styles.projectContainer}>
             <Image src={project.img} alt={project.name} />
@@ -59,7 +59,7 @@ const RecentWorks = ({ theme, languaje }) => {
             </Link>
           </section>
         ))}
-      </section>
+      </article>
     </main>
   );
 };

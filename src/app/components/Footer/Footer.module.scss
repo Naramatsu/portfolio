@@ -4,11 +4,11 @@
 .footerDark {
   @include displayFlex;
   @include themeStyles($terciaryColor);
-  flex-direction: column;
-  width: 100%;
-  padding: 50px 0 20px 0;
   color: #fff;
+  flex-direction: column;
+  padding: 50px 0 20px 0;
   position: relative;
+  width: 100%;
 
   a {
     img {
@@ -33,11 +33,16 @@
       }
     }
   }
+}
 
-  p {
+.inspired {
+  color: $softBgColor;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.5;
+
+  &:hover {
     color: $primaryColor;
-    font-size: 18px;
-    font-weight: 500;
   }
 }
 

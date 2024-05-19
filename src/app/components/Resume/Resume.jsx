@@ -32,7 +32,7 @@ const Resume = ({ theme, languaje }) => {
           <h2>{resumeExperienceTitle[languaje]}</h2>
           <section className={styles.resumeItemList}>
             {experienceList.map(({ period, title, company, info }, index) => (
-              <section
+              <button
                 key={index}
                 className={styles.resumeItem}
                 style={{ cursor: "pointer" }}
@@ -43,7 +43,7 @@ const Resume = ({ theme, languaje }) => {
                 <label>{period}</label>
                 <h3>{title}</h3>
                 <p>{company}</p>
-              </section>
+              </button>
             ))}
           </section>
         </section>

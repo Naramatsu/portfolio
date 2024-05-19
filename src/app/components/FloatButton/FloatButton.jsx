@@ -21,18 +21,18 @@ const FloatButton = () => {
         className={iconSettingClassName}
         onClick={() => setIsSettingsOpen(!isSettingsOpen)}
       />
-      <section
+      <button
         className={styles.themeIcon}
         onClick={() => setTheme(theme === DARK ? LIGHT : DARK)}
       >
         {actualThemeIcon}
-      </section>
-      <section
+      </button>
+      <button
         className={styles.languajeIcon}
         onClick={() => setLanguaje(languaje === ENGLISH ? SPANISH : ENGLISH)}
       >
         {actualLanguaje}
-      </section>
+      </button>
     </section>
   );
 };

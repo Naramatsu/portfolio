@@ -5,7 +5,12 @@ import LogoWhite from "../../jcnm_logo_white.png";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { routes } from "../Header/Header.data";
-import { DARK } from "@/utils/constants";
+import { DARK, ENGLISH, SPANISH } from "@/utils/constants";
+
+const inspiredByLabel = {
+  [SPANISH]: "Inspirado en esto.",
+  [ENGLISH]: "Inspired by this.",
+};
 
 const Footer = ({ theme, languaje }) => {
   const LogoTheme = theme === DARK ? LogoWhite : Logo;
@@ -23,7 +28,14 @@ const Footer = ({ theme, languaje }) => {
           </li>
         ))}
       </ul>
-      <p>Jonathan Camilo Narvaez Martinez</p>
+      <a
+        href="https://themejunction.net/html/gerold/demo/index-light.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.inspired}
+      >
+        {inspiredByLabel[languaje]}
+      </a>
     </section>
   );
 };
