@@ -120,54 +120,54 @@ export const experienceList = [
       ],
     },
   },
-  {
-    period: "2022 - 2022",
-    title: "Frontend Developer",
-    company: "EPAM",
-    info: {
-      description: {
-        [ENGLISH]: (
-          <p>
-            Growth (Improving and acquiring knowledge) — Reinforcing knowledge
-            in ReactJS, React hooks, ReactJs + Typescript, React Native (for
-            android) and NextJS. Learning basic concepts in user interface
-            design with Figma, I worked on personal projects like: OAuth login
-            services with JWT + Google + NodeJS, News application for android
-            devices, Mockups for a Store application.
-          </p>
-        ),
-        [SPANISH]: (
-          <p>
-            Etapa de crecimiento mejorando, y adquisición de conocimientos -
-            Refuerzo de conocimientos en ReactJS, React hooks, ReactJs +
-            Typescript, React Native (para android) y NextJS. Aprendizaje de
-            conceptos básicos en diseño de interfaces de usuario con Figma,
-            trabajé en proyectos personales como: Servicios de login OAuth con
-            JWT + Google + NodeJS, Aplicación de noticias para dispositivos
-            android, Mockups para una aplicación Store
-          </p>
-        ),
-      },
-      techs: [
-        "HTML5",
-        "CSS3",
-        "Javascript",
-        "ReactJs",
-        "React hooks",
-        "SASS",
-        "ES6",
-        "Git",
-        "Github",
-        "Typescript",
-        "React Native",
-        "NextJs",
-        "Figma",
-        "Aws",
-        "Google",
-        "NodeJs",
-      ],
-    },
-  },
+  // {
+  //   period: "2022 - 2022",
+  //   title: "Frontend Developer",
+  //   company: "EPAM",
+  //   info: {
+  //     description: {
+  //       [ENGLISH]: (
+  //         <p>
+  //           Growth (Improving and acquiring knowledge) — Reinforcing knowledge
+  //           in ReactJS, React hooks, ReactJs + Typescript, React Native (for
+  //           android) and NextJS. Learning basic concepts in user interface
+  //           design with Figma, I worked on personal projects like: OAuth login
+  //           services with JWT + Google + NodeJS, News application for android
+  //           devices, Mockups for a Store application.
+  //         </p>
+  //       ),
+  //       [SPANISH]: (
+  //         <p>
+  //           Etapa de crecimiento mejorando, y adquisición de conocimientos -
+  //           Refuerzo de conocimientos en ReactJS, React hooks, ReactJs +
+  //           Typescript, React Native (para android) y NextJS. Aprendizaje de
+  //           conceptos básicos en diseño de interfaces de usuario con Figma,
+  //           trabajé en proyectos personales como: Servicios de login OAuth con
+  //           JWT + Google + NodeJS, Aplicación de noticias para dispositivos
+  //           android, Mockups para una aplicación Store
+  //         </p>
+  //       ),
+  //     },
+  //     techs: [
+  //       "HTML5",
+  //       "CSS3",
+  //       "Javascript",
+  //       "ReactJs",
+  //       "React hooks",
+  //       "SASS",
+  //       "ES6",
+  //       "Git",
+  //       "Github",
+  //       "Typescript",
+  //       "React Native",
+  //       "NextJs",
+  //       "Figma",
+  //       "Aws",
+  //       "Google",
+  //       "NodeJs",
+  //     ],
+  //   },
+  // },
   {
     period: "2020 - 2022",
     title: "Fullstack Developer",
