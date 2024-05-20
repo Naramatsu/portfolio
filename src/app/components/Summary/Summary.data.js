@@ -1,6 +1,6 @@
 import { ENGLISH, SPANISH, whatsAppLink } from "@/utils/constants";
 import {
-  FaFacebookF,
+  // FaFacebookF,
   FaGithub,
   FaLinkedinIn,
   FaWhatsapp,
@@ -44,10 +44,10 @@ export const downloadCvLabel = {
 };
 
 export const mediaLinks = [
-  {
-    link: "https://www.facebook.com/jcnm19/",
-    icon: <FaFacebookF />,
-  },
+  // {
+  //   link: "https://www.facebook.com/jcnm19/",
+  //   icon: <FaFacebookF />,
+  // },
   {
     link: "https://www.linkedin.com/in/jonathan-narv%C3%A1ez-mart%C3%ADnez-338102233/",
     icon: <FaLinkedinIn />,
