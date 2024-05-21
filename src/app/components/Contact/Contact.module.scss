@@ -5,6 +5,11 @@
   @include themeStyles($softBgColor);
   padding: 120px 0;
   width: 100%;
+
+  input,
+  textarea {
+    color: #fff;
+  }
 }
 
 .contactDark {
