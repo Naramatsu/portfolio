@@ -4,6 +4,7 @@ import PokedexApp from "../../assets/projects/pokedexApp.png";
 import CoachBootsApp from "../../assets/projects/coachboostApp.jpg";
 import WordPuzzleApp from "../../assets/projects/wordpuzzleApp.jpg";
 import JtytApp from "../../assets/projects/jtytApp.jpg";
+import GladysPortfolioApp from "../../assets/projects/GladysPortfolioApp.png";
 
 import CoachBootsUIUX from "../../assets/projects/coachbootsUIUX.jpg";
 import ShopAppUIUX from "../../assets/projects/shopUIUX.jpg";
@@ -46,6 +47,16 @@ export const projectList = [
         "League of Legends app for boosting or finding coaching by professionals.",
       [SPANISH]:
         "Aplicación League of Legends para impulsar o encontrar entrenamiento por parte de profesionales.",
+    },
+  },
+  {
+    img: GladysPortfolioApp,
+    name: "Gladys Mendoza (Community Manager)",
+    type: "Apps",
+    link: "https://portfolio-gladys.vercel.app/",
+    description: {
+      [ENGLISH]: "Personal portfolio for a profesional community manager.",
+      [SPANISH]: "Portafolio personal de una comunicadora social profesional.",
     },
   },
   {
