@@ -55,7 +55,7 @@ export const contactInfoList = [
       [ENGLISH]: "Phone",
       [SPANISH]: "Telefono",
     },
-    label: ["+57 317 8559 796"],
+    label: ["+57 318 3423397"],
   },
   {
     icon: <MdOutlineMail />,

@@ -5,4 +5,4 @@ export const DARK = "dark";
 export const SUCCESS = "success";
 export const ERROR = "error";
 
-export const whatsAppLink = "https://wa.me/573178559796";
+export const whatsAppLink = "https://wa.me/573183423397";
