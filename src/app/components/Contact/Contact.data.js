@@ -10,7 +10,7 @@ export const contactTitle = {
 
 export const contactDescription = {
   [ENGLISH]:
-    "I code and design beautiful simple things and i love what i do. Just simple like that!",
+    "I code and design beautiful, simple things and I love what I do. Just simple like that!",
   [SPANISH]:
     "Codifico y diseño cosas hermosas y simples y amo lo que hago. ¡Así de simple!",
 };

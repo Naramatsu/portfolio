@@ -49,7 +49,7 @@ export const experienceList = [
           <p>
             Kromac-UI (Style framework) — is a 100% responsive style framework
             that seeks to facilitate the development and implementation of
-            eye-catching components with modern styles to web applications.
+            eye-catching components with modern styles in web applications.
           </p>
         ),
         [SPANISH]: (
@@ -87,17 +87,21 @@ export const experienceList = [
             Colpatria bank application — Creation of an application in ReactJS +
             Redux and others, conformed by a group of 2 QA testers, 2 business
             analysts, 1 agile facilitator, 4 backend developers and 4 frontend
-            developers, each one was in charge of features created in the
+            developers, each of whom was in charge of features created in the
             backlog according to the Product Owner projections.
           </p>
         ),
         [SPANISH]: (
           <p>
-            Colpatria bank application — Creation of an application in ReactJS +
-            Redux and others, conformed by a group of 2 QA testers, 2 business
-            analysts, 1 agile facilitator, 4 backend developers and 4 frontend
-            developers, each one was in charge of features created in the
-            backlog according to the Product Owner projections.
+            Aplicativo para banco localizado en Colombia — Incremento y
+            validación de funcionamiento de producto usando ReactJS + Redux y
+            demás tecnologías internas de la compañía. Equipo conformado por un
+            grupo de 2 QA testers, 2 business analysts, 1 agile facilitator, 4
+            desarrolladores backend y 4 desarrolladores frontend, cada uno se
+            encargaba de las funcionalidades creadas en el backlog de acuerdo a
+            las proyecciones del Product Owner. Metodología de trabajo
+            resolviendo tareas por duplas (por cada frontend trabaja con un
+            backend developer).
           </p>
         ),
       },
@@ -185,11 +189,12 @@ export const experienceList = [
         ),
         [SPANISH]: (
           <p>
-            Education web application — Creation of an application in ReactJS +
+            Education web application —Creación de la aplicación en ReactJS +
             SASS + Redux + NojdeJS + Express + MongoDB + OracleDB + AWS stack,
-            conformed by a group of 3 backend developers and 1 frontend
-            developer, each one was in charge of features created in the backlog
-            according to the Product Owner projections.
+            equipo conformado por un grupo de 3 desarrolladores backend y 1
+            desarrollador frontend, cada uno se encargaba de las funcionalidades
+            creadas en el backlog de acuerdo a las proyecciones del Product
+            Owner
           </p>
         ),
       },
@@ -228,17 +233,18 @@ export const experienceList = [
         [ENGLISH]: (
           <p>
             Restaurant Application — Maintaining an application in Foxpro,
-            Visual Basic and migrating to ASP .Net, conformed by a group of 3
+            Visual Basic and migrating to ASP .Net, was formed by a group of 3
             full stack developers, each one was in charge of features created in
             the backlog according to the Product Owner projections.
           </p>
         ),
         [SPANISH]: (
           <p>
-            Restaurant Application — Maintaining an application in Foxpro,
-            Visual Basic and migrating to ASP .Net, conformed by a group of 3
-            full stack developers, each one was in charge of features created in
-            the backlog according to the Product Owner projections
+            Aplicativo para restaurantes— Mantenimiento de una aplicación en
+            Foxpro, Visual Basic y migración a ASP .Net, equipo conformado por
+            un grupo de 3 desarrolladores full stack, cada uno se encargaba de
+            funcionalidades creadas en el backlog de acuerdo a las proyecciones
+            del Product Owner
           </p>
         ),
       },

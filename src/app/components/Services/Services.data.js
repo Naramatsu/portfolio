@@ -19,7 +19,7 @@ export const servicesList = [
       [ENGLISH]:
         "Provide quality solutions by creating or modifying complex visual components in a simple and user-friendly way, always applying good practices using ReactJs.",
       [SPANISH]:
-        "Brindo soluciones de calidad creando o modificando componentes visuales complejos de una forma sencilla y amigable para los usuarios aplicando siempre buenas practicas utilizando ReactJs.",
+        "Brindo soluciones de calidad, creando o modificando componentes visuales complejos de una forma sencilla y amigable para los usuarios, aplicando siempre buenas prácticas utilizando ReactJs.",
     },
   },
   {

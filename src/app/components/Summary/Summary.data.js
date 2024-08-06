@@ -17,7 +17,7 @@ export const introduction = {
       </h1>
       <p>
         Able to create, modify, fix and test frontend functions, integrating
-        APIs and ensuring high performance and good user experience.
+        APIs and ensuring high performance and a good user experience.
       </p>
     </>
   ),

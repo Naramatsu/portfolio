@@ -14,7 +14,7 @@ export const skillsTitle = {
 
 export const skillsDescription = {
   [ENGLISH]:
-    "I have a strong background in software development using fresh and modern languages which demonstrate my skills and knowledge in building modern and scalable web applications.",
+    "I have a strong background in software development using fresh and modern languages, which demonstrates my skills and knowledge in building modern and scalable web applications.",
   [SPANISH]:
     "Tengo una sólida experiencia en desarrollo de software utilizando lenguajes novedosos y modernos que demuestran mis habilidades y conocimientos en la creación de aplicaciones web modernas y escalables.",
 };
