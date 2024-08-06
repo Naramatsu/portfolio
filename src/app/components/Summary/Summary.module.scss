@@ -51,6 +51,8 @@
 }
 
 .sectionSummary {
+  z-index: 2;
+
   h3 {
     color: $terciaryColor;
     font-size: 36px;
@@ -58,7 +60,7 @@
   }
 
   h1 {
-    @include textGradient;
+    @include textGradientPurple;
     font-size: 65px;
     margin-bottom: 15px;
   }

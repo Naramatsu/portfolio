@@ -2,6 +2,7 @@
 $primaryColor: #b6138e;
 $secundaryColor: #29095d;
 $terciaryColor: #2a1454;
+$purpleTitle: #6100ff;
 $softBgColor: #f6f3fc;
 $bgGRadientLight: linear-gradient(
   245deg,
@@ -120,6 +121,12 @@ $projectBackground: #140c1c;
   -webkit-text-fill-color: transparent;
 }
 
+@mixin textGradientPurple {
+  background: linear-gradient(to right, $primaryColor 0%, $purpleTitle 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @mixin linkHover {
   @include displayFlex;
   border: solid 1px $primaryColor;
@@ -138,7 +145,7 @@ $projectBackground: #140c1c;
 }
 
 @mixin titleGradient {
-  @include textGradient;
+  @include textGradientPurple;
   font-size: 45px;
 }
 
