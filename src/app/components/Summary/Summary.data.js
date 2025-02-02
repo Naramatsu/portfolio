@@ -55,7 +55,7 @@ export const mediaLinks = [
 
 export const quikDataInfo = [
   {
-    mount: 5,
+    mount: 6,
     label: {
       [ENGLISH]: "Years of Experience",
       [SPANISH]: "Años de Experiencia",
