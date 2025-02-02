@@ -5,6 +5,7 @@ import CoachBootsApp from "../../assets/projects/coachboostApp.jpg";
 import WordPuzzleApp from "../../assets/projects/wordpuzzleApp.jpg";
 import JtytApp from "../../assets/projects/jtytApp.jpg";
 import GladysPortfolioApp from "../../assets/projects/GladysPortfolioApp.png";
+import Pomarosa from "../../assets/projects/Pomarosa.png";
 
 import CoachBootsUIUX from "../../assets/projects/coachbootsUIUX.jpg";
 import ShopAppUIUX from "../../assets/projects/shopUIUX.jpg";
@@ -35,6 +36,18 @@ export const projectList = [
         "100% responsive style framework that seeks to facilitate the development and implementation of components.",
       [SPANISH]:
         "Framework de estilo 100% responsive que busca facilitar el desarrollo e implementación de componentes.",
+    },
+  },
+  {
+    img: Pomarosa,
+    name: "PomaRosa",
+    type: "Apps",
+    link: "https://www.pomarosa.com.co/",
+    description: {
+      [ENGLISH]:
+        "Artisan bakery, pastry shop, cafeteria, gourmet bakery in Cartagena de Indias.",
+      [SPANISH]:
+        "Panadería artesanal, pastelería, cafetería, panadería gourmet en Cartagena de Indias.",
     },
   },
   {

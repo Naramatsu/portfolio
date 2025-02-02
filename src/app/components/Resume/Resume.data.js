@@ -77,9 +77,57 @@ export const experienceList = [
     },
   },
   {
+    period: "2024 - 2025",
+    title: "Frontend Developer",
+    company: "Adecco/Akkodis - The Home Depot",
+    info: {
+      description: {
+        [ENGLISH]: (
+          <p>
+            Data Analysis Application — Enhancement and validation of product
+            functionality using ReactJS, React Context, and other internal
+            company technologies on the frontend. Part of a team of seven
+            frontend developers, each responsible for implementing features from
+            the backlog based on the Product Owner&apos;s projections.
+          </p>
+        ),
+        [SPANISH]: (
+          <p>
+            Aplicativo para análisis de datos — Incremento y validación de
+            funcionamiento de producto usando ReactJS + React Context y demás
+            tecnologías internas de la compañía del lado del frontend. Equipo
+            conformado por un grupo de 7 desarrolladores frontend, cada uno se
+            encargaba de las funcionalidades creadas en el backlog de acuerdo a
+            las proyecciones del Product Owner.
+          </p>
+        ),
+      },
+      techs: [
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "ReactJs",
+        "React hooks",
+        "React Query",
+        "React Context",
+        "ES6",
+        "Git",
+        "Github",
+        "Jira",
+        "Jest",
+        "Cypress",
+        "Api REST",
+        "Google Cloud Platform",
+        "BigQuery",
+        "Golang",
+        "Mockups",
+      ],
+    },
+  },
+  {
     period: "2023 - 2024",
     title: "Frontend Developer",
-    company: "Tech Mahindra",
+    company: "Tech Mahindra - Scotiabank Colpatria",
     info: {
       description: {
         [ENGLISH]: (
@@ -124,54 +172,6 @@ export const experienceList = [
       ],
     },
   },
-  // {
-  //   period: "2022 - 2022",
-  //   title: "Frontend Developer",
-  //   company: "EPAM",
-  //   info: {
-  //     description: {
-  //       [ENGLISH]: (
-  //         <p>
-  //           Growth (Improving and acquiring knowledge) — Reinforcing knowledge
-  //           in ReactJS, React hooks, ReactJs + Typescript, React Native (for
-  //           android) and NextJS. Learning basic concepts in user interface
-  //           design with Figma, I worked on personal projects like: OAuth login
-  //           services with JWT + Google + NodeJS, News application for android
-  //           devices, Mockups for a Store application.
-  //         </p>
-  //       ),
-  //       [SPANISH]: (
-  //         <p>
-  //           Etapa de crecimiento mejorando, y adquisición de conocimientos -
-  //           Refuerzo de conocimientos en ReactJS, React hooks, ReactJs +
-  //           Typescript, React Native (para android) y NextJS. Aprendizaje de
-  //           conceptos básicos en diseño de interfaces de usuario con Figma,
-  //           trabajé en proyectos personales como: Servicios de login OAuth con
-  //           JWT + Google + NodeJS, Aplicación de noticias para dispositivos
-  //           android, Mockups para una aplicación Store
-  //         </p>
-  //       ),
-  //     },
-  //     techs: [
-  //       "HTML5",
-  //       "CSS3",
-  //       "Javascript",
-  //       "ReactJs",
-  //       "React hooks",
-  //       "SASS",
-  //       "ES6",
-  //       "Git",
-  //       "Github",
-  //       "Typescript",
-  //       "React Native",
-  //       "NextJs",
-  //       "Figma",
-  //       "Aws",
-  //       "Google",
-  //       "NodeJs",
-  //     ],
-  //   },
-  // },
   {
     period: "2020 - 2022",
     title: "Fullstack Developer",

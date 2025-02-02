@@ -1,5 +1,6 @@
 import JsLogo from "../../assets/logos/jsLogo.png";
 import ReactLogo from "../../assets/logos/reactLogo.png";
+import Typescriptlogo from "../../assets/logos/Typescriptlogo.png";
 import NodeLogo from "../../assets/logos/nodeLogo.png";
 import Html5Logo from "../../assets/logos/htmlLogo.png";
 import CssLogo from "../../assets/logos/css3Logo.png";
@@ -27,6 +28,10 @@ export const skillsList = [
   {
     img: ReactLogo,
     name: "React Js",
+  },
+  {
+    img: Typescriptlogo,
+    name: "TypeScript",
   },
   {
     img: NodeLogo,

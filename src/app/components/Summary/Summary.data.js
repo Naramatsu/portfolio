@@ -1,10 +1,5 @@
 import { ENGLISH, SPANISH, whatsAppLink } from "@/utils/constants";
-import {
-  // FaFacebookF,
-  FaGithub,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export const introduction = {
   [ENGLISH]: (
@@ -44,10 +39,6 @@ export const downloadCvLabel = {
 };
 
 export const mediaLinks = [
-  // {
-  //   link: "https://www.facebook.com/jcnm19/",
-  //   icon: <FaFacebookF />,
-  // },
   {
     link: "https://www.linkedin.com/in/jonathan-narv%C3%A1ez-mart%C3%ADnez-338102233/",
     icon: <FaLinkedinIn />,
