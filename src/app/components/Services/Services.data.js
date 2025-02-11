@@ -1,8 +1,8 @@
 import { ENGLISH, SPANISH } from "@/utils/constants";
 
 export const servicesTitleLabel = {
-  [ENGLISH]: "My Quality Services",
-  [SPANISH]: "Mis servicios",
+  [ENGLISH]: "Services",
+  [SPANISH]: "Servicios",
 };
 
 export const servicesDescription = {

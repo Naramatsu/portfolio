@@ -1,10 +1,17 @@
 @import "../../../utils/constants.module.scss";
 
 .floatButton {
+  @include displayFlex;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  flex-direction: column;
+  height: 120px;
+  justify-content: center;
   position: fixed;
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+  width: 60px;
   z-index: 100;
 }
 
@@ -26,24 +33,12 @@
   z-index: 10;
 }
 
-.iconSettingOpen {
-  transform: rotate(135deg);
-
-  & ~ .themeIcon {
-    top: -60px;
-  }
-
-  & ~ .languajeIcon {
-    top: 60px;
-  }
-}
-
 .themeIcon,
 .languajeIcon {
   @include displayFlex;
+  gap: 5px;
   justify-content: center;
-  position: absolute;
-  right: 0;
+  position: relative;
   top: 0%;
   z-index: 9;
 }

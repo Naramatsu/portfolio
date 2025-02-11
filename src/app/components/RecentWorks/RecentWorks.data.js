@@ -12,7 +12,7 @@ import ShopAppUIUX from "../../assets/projects/shopUIUX.jpg";
 import { ENGLISH, SPANISH } from "@/utils/constants";
 
 export const recentWorksTitle = {
-  [ENGLISH]: "My Recent Works",
+  [ENGLISH]: "Recent Works",
   [SPANISH]: "Trabajos recientes",
 };
 

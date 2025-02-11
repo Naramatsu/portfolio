@@ -9,8 +9,8 @@ import FigmaLogo from "../../assets/logos/figmaLogo.png";
 import { ENGLISH, SPANISH } from "@/utils/constants";
 
 export const skillsTitle = {
-  [ENGLISH]: "My Skills",
-  [SPANISH]: "Mis Habilidades",
+  [ENGLISH]: "Skills",
+  [SPANISH]: "Habilidades",
 };
 
 export const skillsDescription = {

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import styles from "./FloatButton.module.scss";
 import { AppContext } from "@/app/store";
 import { DARK, ENGLISH, LIGHT, SPANISH } from "@/utils/constants";
@@ -8,19 +8,12 @@ import { FaRegLightbulb, FaRegMoon } from "react-icons/fa";
 
 const FloatButton = () => {
   const { theme, languaje, setTheme, setLanguaje } = useContext(AppContext);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const actualThemeIcon = theme === DARK ? <FaRegMoon /> : <FaRegLightbulb />;
   const actualLanguaje = languaje === ENGLISH ? "En" : "Es";
-  const iconSettingClassName = isSettingsOpen
-    ? styles.iconSettingOpen
-    : styles.iconSetting;
+  const iconSettingClassName = styles.iconSettingOpen;
 
   return (
     <section className={styles.floatButton}>
-      <FaPlus
-        className={iconSettingClassName}
-        onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-      />
       <button
         className={styles.themeIcon}
         onClick={() => setTheme(theme === DARK ? LIGHT : DARK)}

@@ -34,13 +34,13 @@ const figmaCertification = new URL(
 );
 
 export const resumeExperienceTitle = {
-  [ENGLISH]: "My Experience",
-  [SPANISH]: "Mi Experiencia",
+  [ENGLISH]: "Experience",
+  [SPANISH]: "Experiencia",
 };
 
 export const experienceList = [
   {
-    period: "2021 - Cuerrent",
+    period: "2021 - Current",
     title: "Frontend Developer",
     company: "Freelance",
     info: {
@@ -263,8 +263,8 @@ export const experienceList = [
 ];
 
 export const resumeEducationTitle = {
-  [ENGLISH]: "My Education",
-  [SPANISH]: "Mi Educación",
+  [ENGLISH]: "Education",
+  [SPANISH]: "Educación",
 };
 
 export const educationList = [

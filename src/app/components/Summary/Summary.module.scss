@@ -85,6 +85,7 @@
 .sectionButtons {
   @include displayFlex;
   margin-top: 50px;
+  gap: 20px;
 
   ul {
     @include ulHeader;
